@@ -1,6 +1,6 @@
 namespace StarCitizenApi.ArkStarmap.Model
 {
-    public class Affiliation
+    public class Affiliation1
     {
         public string id { get; set; }
         public string name { get; set; }

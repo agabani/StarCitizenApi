@@ -51,15 +51,23 @@
     <Compile Include="ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Model\Affiliation.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects.cs" />
+    <Compile Include="ArkStarmap\Model\Affiliation1.cs" />
+    <Compile Include="ArkStarmap\Model\Celestial_Objects.cs" />
     <Compile Include="ArkStarmap\Model\Data.cs" />
-    <Compile Include="ArkStarmap\Model\PlanetsSize.cs" />
-    <Compile Include="ArkStarmap\Model\Result.cs" />
-    <Compile Include="ArkStarmap\Model\ShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Highlight.cs" />
+    <Compile Include="ArkStarmap\Model\Images.cs" />
+    <Compile Include="ArkStarmap\Model\Images1.cs" />
+    <Compile Include="ArkStarmap\Model\Planetssize.cs" />
+    <Compile Include="ArkStarmap\Model\Resultset.cs" />
+    <Compile Include="ArkStarmap\Model\Ring.cs" />
+    <Compile Include="ArkStarmap\Model\Rootobject.cs" />
+    <Compile Include="ArkStarmap\Model\Shader_Data.cs" />
+    <Compile Include="ArkStarmap\Model\Shader_Data1.cs" />
     <Compile Include="ArkStarmap\Model\Starfield.cs" />
-    <Compile Include="ArkStarmap\Model\SubType.cs" />
+    <Compile Include="ArkStarmap\Model\Subtype.cs" />
     <Compile Include="ArkStarmap\Model\Sun.cs" />
-    <Compile Include="ArkStarmap\Model\System.cs" />
+    <Compile Include="ArkStarmap\Model\Texture.cs" />
+    <Compile Include="ArkStarmap\Model\Thumbnail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

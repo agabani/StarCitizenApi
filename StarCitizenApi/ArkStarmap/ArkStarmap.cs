@@ -11,7 +11,7 @@ namespace StarCitizenApi.ArkStarmap
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
 
-        public async Task<Result> StarSystem(string code)
+        public async Task<Rootobject> StarSystem(string code)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
             {
@@ -20,7 +20,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<Result>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<Rootobject>(await response.Content.ReadAsStringAsync());
             }
         }
     }

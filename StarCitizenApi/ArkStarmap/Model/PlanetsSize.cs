@@ -1,17 +1,9 @@
-﻿using Newtonsoft.Json;
-
 namespace StarCitizenApi.ArkStarmap.Model
 {
-    [JsonObject]
-    public class PlanetsSize
+    public class Planetssize
     {
-        [JsonProperty(PropertyName = "min")]
-        public double Min { get; set; }
-
-        [JsonProperty(PropertyName = "max")]
-        public double Max { get; set; }
-
-        [JsonProperty(PropertyName = "kFactor")]
-        public double KFactor { get; set; }
+        public float min { get; set; }
+        public float max { get; set; }
+        public int kFactor { get; set; }
     }
 }

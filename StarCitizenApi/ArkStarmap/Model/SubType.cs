@@ -1,17 +1,9 @@
-﻿using Newtonsoft.Json;
-
 namespace StarCitizenApi.ArkStarmap.Model
 {
-    [JsonObject]
-    public class SubType
+    public class Subtype
     {
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
-
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
-
-        [JsonProperty(PropertyName = "type")]
-        public string Type { get; set; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string type { get; set; }
     }
 }
