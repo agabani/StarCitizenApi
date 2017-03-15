@@ -1,34 +1,72 @@
+using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
     public class StarSystem
     {
-        [JsonProperty("rowcount")]
-        public int RowCount { get; set; }
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-        [JsonProperty("totalrows")]
-        public string TotalRows { get; set; }
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-        [JsonProperty("estimatedrows")]
-        public bool EstimatedRows { get; set; }
+        [JsonProperty("time_modified")]
+        public DateTime TimeModified { get; set; }
 
-        [JsonProperty("pagesize")]
-        public int PageSize { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-        [JsonProperty("pagecount")]
-        public object PageCount { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-        [JsonProperty("page")]
-        public int Page { get; set; }
+        [JsonProperty("code")]
+        public string Code { get; set; }
 
-        [JsonProperty("offset")]
-        public int Offset { get; set; }
+        [JsonProperty("position_x")]
+        public string PositionX { get; set; }
 
-        [JsonProperty("startrow")]
-        public int StartRow { get; set; }
+        [JsonProperty("position_y")]
+        public string PositionY { get; set; }
 
-        [JsonProperty("resultset")]
-        public ResultSet[] ResultSet { get; set; }
+        [JsonProperty("position_z")]
+        public string PositionZ { get; set; }
+
+        [JsonProperty("info_url")]
+        public object InfoUrl { get; set; }
+
+        [JsonProperty("habitable_zone_inner")]
+        public string HabitableZoneInner { get; set; }
+
+        [JsonProperty("habitable_zone_outer")]
+        public string HabitableZoneOuter { get; set; }
+
+        [JsonProperty("frost_line")]
+        public string FrostLine { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("shader_data")]
+        public StarSystemShaderData ShaderData { get; set; }
+
+        [JsonProperty("affiliation")]
+        public Affiliation[] Affiliation { get; set; }
+
+        [JsonProperty("celestial_objects")]
+        public CelestialObjects[] CelestialObjects { get; set; }
+
+        [JsonProperty("aggregated_size")]
+        public string AggregatedSize { get; set; }
+
+        [JsonProperty("aggregated_population")]
+        public double AggregatedPopulation { get; set; }
+
+        [JsonProperty("aggregated_economy")]
+        public double AggregatedEconomy { get; set; }
+
+        [JsonProperty("aggregated_danger")]
+        public double AggregatedDanger { get; set; }
     }
 }

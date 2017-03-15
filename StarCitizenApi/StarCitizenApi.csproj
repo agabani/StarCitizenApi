@@ -142,12 +142,12 @@
     <Compile Include="ArkStarmap\Model\Result.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Highlight.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\TextureImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\ResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Ring.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\CelestialShaderData.cs" />
