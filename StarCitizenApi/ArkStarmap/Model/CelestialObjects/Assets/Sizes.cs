@@ -14,120 +14,120 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets
         public DeletableProperties<int?> HeapInfobox { get; set; }
 
         [JsonProperty("bug_council_thumbnail")]
-        public DeletableProperties<int?> bug_council_thumbnail { get; set; }
+        public DeletableProperties<int?> BugCouncilThumbnail { get; set; }
 
         [JsonProperty("post_section_header")]
-        public Post_Section_Header post_section_header { get; set; }
+        public Properties<int?> PostSectionHeader { get; set; }
 
         [JsonProperty("channel_item_full")]
-        public Channel_Item_Full channel_item_full { get; set; }
+        public Properties<int?> ChannelItemFull { get; set; }
 
         [JsonProperty("home_transmissions_item_expanded")]
-        public Home_Transmissions_Item_Expanded home_transmissions_item_expanded { get; set; }
+        public Properties<int?> HomeTransmissionsItemExpanded { get; set; }
 
         [JsonProperty("subscribers_vault_thumbnail")]
-        public Subscribers_Vault_Thumbnail subscribers_vault_thumbnail { get; set; }
+        public Properties<int?> SubscribersVaultThumbnail { get; set; }
 
         [JsonProperty("slideshow")]
-        public Slideshow slideshow { get; set; }
+        public Properties<int?> Slideshow { get; set; }
 
         [JsonProperty("slideshow_pager")]
-        public Slideshow_Pager slideshow_pager { get; set; }
+        public Properties<int?> SlideshowPager { get; set; }
 
         [JsonProperty("slideshow_wide")]
-        public Slideshow_Wide slideshow_wide { get; set; }
+        public Properties<int?> SlideshowWide { get; set; }
 
         [JsonProperty("vault_thumb")]
-        public Properties<int?> vault_thumb { get; set; }
+        public Properties<int?> VaultThumb { get; set; }
 
         [JsonProperty("post")]
-        public Properties<int?> post { get; set; }
+        public Properties<int?> Post { get; set; }
 
         [JsonProperty("wallpaper_thumb")]
-        public Wallpaper_Thumb wallpaper_thumb { get; set; }
+        public Properties<int?> WallpaperThumb { get; set; }
 
         [JsonProperty("product_thumb_large")]
-        public Product_Thumb_Large product_thumb_large { get; set; }
+        public Properties<int?> ProductThumbLarge { get; set; }
 
         [JsonProperty("product_thumb_medium_and_small")]
-        public Product_Thumb_Medium_And_Small product_thumb_medium_and_small { get; set; }
+        public Properties<int?> ProductThumbMediumAndSmall { get; set; }
 
         [JsonProperty("component_description")]
-        public Properties<int?> component_description { get; set; }
+        public Properties<int?> ComponentDescription { get; set; }
 
         [JsonProperty("product_thumb_in_description")]
-        public Product_Thumb_In_Description product_thumb_in_description { get; set; }
+        public Properties<int?> ProductThumbInDescription { get; set; }
 
         [JsonProperty("product_thumb_shipmod")]
-        public Product_Thumb_Shipmod product_thumb_shipmod { get; set; }
+        public Properties<int?> ProductThumbShipmod { get; set; }
 
         [JsonProperty("press_latest_post")]
-        public Press_Latest_Post press_latest_post { get; set; }
+        public Properties<int?> PressLatestPost { get; set; }
 
         [JsonProperty("store_small")]
-        public Store_Small store_small { get; set; }
+        public Properties<int?> StoreSmall { get; set; }
 
         [JsonProperty("store_large")]
-        public Store_Large store_large { get; set; }
+        public Properties<int?> StoreLarge { get; set; }
 
         [JsonProperty("store_hub_small")]
-        public Store_Hub_Small store_hub_small { get; set; }
+        public Properties<int?> StoreHubSmall { get; set; }
 
         [JsonProperty("store_hub_large")]
-        public Store_Hub_Large store_hub_large { get; set; }
+        public Properties<int?> StoreHubLarge { get; set; }
 
         [JsonProperty("store_slideshow_small")]
-        public Store_Slideshow_Small store_slideshow_small { get; set; }
+        public Properties<int?> StoreSlideshowSmall { get; set; }
 
         [JsonProperty("store_slideshow_large")]
-        public Store_Slideshow_Large store_slideshow_large { get; set; }
+        public Properties<int?> StoreSlideshowLarge { get; set; }
 
         [JsonProperty("store_slideshow_small_zoom")]
-        public Store_Slideshow_Small_Zoom store_slideshow_small_zoom { get; set; }
+        public Properties<int?> StoreSlideshowSmallZoom { get; set; }
 
         [JsonProperty("store_slideshow_large_zoom")]
-        public Store_Slideshow_Large_Zoom store_slideshow_large_zoom { get; set; }
+        public Properties<int?> StoreSlideshowLargeZoom { get; set; }
 
         [JsonProperty("store_thumb_listing_small")]
-        public Store_Thumb_Listing_Small store_thumb_listing_small { get; set; }
+        public Properties<int?> StoreThumbListingSmall { get; set; }
 
         [JsonProperty("store_thumb_sku_detail")]
-        public Store_Thumb_Sku_Detail store_thumb_sku_detail { get; set; }
+        public Properties<int?> StoreThumbSkuDetail { get; set; }
 
         [JsonProperty("store_upgrade_half")]
-        public Store_Upgrade_Half store_upgrade_half { get; set; }
+        public Properties<int?> StoreUpgradeHalf { get; set; }
 
         [JsonProperty("avatar")]
-        public Avatar avatar { get; set; }
+        public DeletableProperties<int?> Avatar { get; set; }
 
         [JsonProperty("banner")]
-        public Banner banner { get; set; }
+        public DeletableProperties<int?> Banner { get; set; }
 
         [JsonProperty("cover")]
-        public DeletableProperties<int?> cover { get; set; }
+        public DeletableProperties<int?> Cover { get; set; }
 
         [JsonProperty("logo")]
-        public Logo logo { get; set; }
+        public DeletableProperties<int?> Logo { get; set; }
 
         [JsonProperty("icon")]
-        public Icon icon { get; set; }
+        public DeletableProperties<int?> Icon { get; set; }
 
         [JsonProperty("background_blur")]
-        public Background_Blur background_blur { get; set; }
+        public DeletableProperties<int?> BackgroundBlur { get; set; }
 
         [JsonProperty("texture")]
-        public Texture1 texture { get; set; }
+        public Properties<int?> Texture { get; set; }
 
         [JsonProperty("hub_large")]
-        public Properties<string> hub_large { get; set; }
+        public Properties<string> HubLarge { get; set; }
 
         [JsonProperty("hub_medium")]
-        public Hub_Medium hub_medium { get; set; }
+        public DeletableProperties<int?> HubMedium { get; set; }
 
         [JsonProperty("hub_small")]
-        public Hub_Small hub_small { get; set; }
+        public DeletableProperties<int?> HubSmall { get; set; }
 
         [JsonProperty("hub_tile")]
-        public Hub_Tile hub_tile { get; set; }
+        public DeletableProperties<int?> HubTile { get; set; }
     }
 }

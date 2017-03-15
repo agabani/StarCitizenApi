@@ -12,6 +12,5 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 
         [JsonProperty("mode")]
         public string mode { get; set; }
-
     }
 }
