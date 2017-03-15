@@ -50,26 +50,26 @@
   <ItemGroup>
     <Compile Include="ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
-    <Compile Include="ArkStarmap\Model\Affiliation.cs" />
-    <Compile Include="ArkStarmap\Model\Affiliations.cs" />
-    <Compile Include="ArkStarmap\Model\Images.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp.cs" />
-    <Compile Include="ArkStarmap\Model\Config.cs" />
-    <Compile Include="ArkStarmap\Model\Data.cs" />
-    <Compile Include="ArkStarmap\Model\Entry.cs" />
-    <Compile Include="ArkStarmap\Model\Exit.cs" />
-    <Compile Include="ArkStarmap\Model\Longrangescanner.cs" />
-    <Compile Include="ArkStarmap\Model\SystemResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\TunnelResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\SpecieResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\AffiliationResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\Route.cs" />
-    <Compile Include="ArkStarmap\Model\Species.cs" />
-    <Compile Include="ArkStarmap\Model\Starfield.cs" />
-    <Compile Include="ArkStarmap\Model\Stars.cs" />
-    <Compile Include="ArkStarmap\Model\Systems.cs" />
-    <Compile Include="ArkStarmap\Model\Thumbnail.cs" />
-    <Compile Include="ArkStarmap\Model\Tunnels.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Affiliation.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Affiliations.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\BootUp.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Data.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Entry.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Exit.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Longrangescanner.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\SystemResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\TunnelResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\SpecieResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\AffiliationResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Route.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Species.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Starfield.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Stars.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Systems.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Thumbnail.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Tunnels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

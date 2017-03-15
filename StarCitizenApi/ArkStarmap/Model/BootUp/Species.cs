@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model
+namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Systems
+    public class Species
     {
         [JsonProperty("rowcount")]
         public int RowCount { get; set; }
@@ -29,6 +29,6 @@ namespace StarCitizenApi.ArkStarmap.Model
         public int StartRow { get; set; }
 
         [JsonProperty("resultset")]
-        public SystemResultSet[] ResultSet { get; set; }
+        public SpecieResultSet[] ResultSet { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model
+namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
     public class BootUp
     {

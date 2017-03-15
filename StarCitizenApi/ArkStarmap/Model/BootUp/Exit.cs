@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model
+namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Entry
+    public class Exit
     {
         [JsonProperty("id")]
         public string Id { get; set; }

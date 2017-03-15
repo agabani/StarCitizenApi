@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model
+namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Tunnels
+    public class Systems
     {
         [JsonProperty("rowcount")]
         public int RowCount { get; set; }
@@ -29,6 +29,6 @@ namespace StarCitizenApi.ArkStarmap.Model
         public int StartRow { get; set; }
 
         [JsonProperty("resultset")]
-        public TunnelResultSet[] ResultSet { get; set; }
+        public SystemResultSet[] ResultSet { get; set; }
     }
 }
