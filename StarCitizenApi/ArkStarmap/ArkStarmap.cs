@@ -8,6 +8,7 @@ using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
 using StarCitizenApi.ArkStarmap.Model.Find;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
+using StarSystem = StarCitizenApi.ArkStarmap.Model.StarSystem.StarSystem;
 
 namespace StarCitizenApi.ArkStarmap
 {
