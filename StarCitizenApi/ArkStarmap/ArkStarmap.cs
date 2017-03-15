@@ -87,12 +87,14 @@ namespace StarCitizenApi.ArkStarmap
 
         public Task<StarMapResult<FindData>> Find(string query)
         {
-            return Post<FindData>("/api/starmap/find", ToJson(new {Query = query}));
+            return Post<FindData>("/api/starmap/find", new {Query = query});
         }
 
-        public async Task<StarMapResult<T>> Post<T>(string endpoint, string body)
+        public async Task<StarMapResult<T>> Post<T>(string endpoint, object body)
         {
-            var content = FileCache.Get(endpoint, body);
+            var json = ToJson(body);
+
+            var content = FileCache.Get(endpoint, json);
 
             if (content != null)
             {
@@ -101,7 +103,7 @@ namespace StarCitizenApi.ArkStarmap
 
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)
             {
-                Content = new StringContent(body, Encoding.UTF8, "application/json")
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
             }))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
@@ -112,7 +114,7 @@ namespace StarCitizenApi.ArkStarmap
                 content = await response.Content.ReadAsStringAsync();
             }
 
-            FileCache.Put(endpoint, body, content);
+            FileCache.Put(endpoint, json, content);
 
             return FromJson<T>(content);
         }
