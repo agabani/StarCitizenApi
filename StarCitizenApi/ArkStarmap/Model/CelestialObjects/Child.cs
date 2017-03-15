@@ -1,6 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets;
+using StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
@@ -73,7 +74,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public string SensorDanger { get; set; }
 
         [JsonProperty("shader_data")]
-        public Shader_Data1 ShaderData { get; set; }
+        public ChildShaderData ShaderData { get; set; }
 
         [JsonProperty("size")]
         public string Size { get; set; }

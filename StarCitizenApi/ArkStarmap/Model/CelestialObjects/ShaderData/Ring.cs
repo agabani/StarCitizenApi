@@ -11,9 +11,9 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData
         public string Color2 { get; set; }
 
         [JsonProperty("radius1")]
-        public float Radius1 { get; set; }
+        public double Radius1 { get; set; }
 
         [JsonProperty("radius2")]
-        public int Radius2 { get; set; }
+        public double Radius2 { get; set; }
     }
 }
