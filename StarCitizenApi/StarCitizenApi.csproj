@@ -80,14 +80,14 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\Highlight.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Highlight1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Images.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Images1.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\MediaImages.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Media.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\Ring.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\Shader_Data.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Shader_Data1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Sizes.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Source_Stream.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Subtype.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />

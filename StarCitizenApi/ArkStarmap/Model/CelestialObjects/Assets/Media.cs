@@ -63,10 +63,10 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets
         public string SourceUrl { get; set; }
 
         [JsonProperty("source_stream")]
-        public Source_Stream SourceStream { get; set; }
+        public SourceStream SourceStream { get; set; }
 
-        [JsonProperty("")]
-        public Images1 Images { get; set; }
+        [JsonProperty("images")]
+        public MediaImages Images { get; set; }
 
         [JsonProperty("membership.id")]
         public string MembershipId { get; set; }
