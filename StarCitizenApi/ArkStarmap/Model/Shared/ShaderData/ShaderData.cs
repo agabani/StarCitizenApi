@@ -1,9 +1,8 @@
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
-namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData
+namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
-    public class ChildShaderData
+    public class ShaderData
     {
         [JsonProperty("orbitalMin")]
         public double OrbitalMin { get; set; }
@@ -16,8 +15,5 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData
 
         [JsonProperty("highlight")]
         public Highlight Highlight { get; set; }
-
-        [JsonProperty("radius")]
-        public double Radius { get; set; }
     }
 }

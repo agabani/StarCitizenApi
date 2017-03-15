@@ -3,8 +3,14 @@ using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
-    public class SystemCelestialShaderData : CelestialShaderData
+    public class SystemCelestialShaderData : ShaderData
     {
+        [JsonProperty("orbitalColor")]
+        public string OrbitalColor { get; set; }
+
+        [JsonProperty("orbitalHighlightColor")]
+        public string OrbitalHighlightColor { get; set; }
+
         [JsonProperty("sun")]
         public Sun Sun { get; set; }
 
@@ -12,7 +18,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
         public double Radius { get; set; }
 
         [JsonProperty("ring")]
-        public new SystemRing Ring { get; set; }
+        public SystemRing Ring { get; set; }
 
         [JsonProperty("fullturn")]
         public double Fullturn { get; set; }
