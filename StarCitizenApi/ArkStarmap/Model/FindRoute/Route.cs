@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.Route
+namespace StarCitizenApi.ArkStarmap.Model.FindRoute
 {
     public class Route
     {

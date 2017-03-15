@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.Route
+namespace StarCitizenApi.ArkStarmap.Model.FindRoute
 {
-    public class RouteData
+    public class FindRoute
     {
         [JsonProperty("shortest")]
         public Route Shortest { get; set; }

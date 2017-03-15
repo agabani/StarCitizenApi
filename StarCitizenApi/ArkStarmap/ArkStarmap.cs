@@ -10,7 +10,7 @@ using StarCitizenApi.ArkStarmap.Model;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 using StarCitizenApi.ArkStarmap.Model.Find;
-using StarCitizenApi.ArkStarmap.Model.Route;
+using StarCitizenApi.ArkStarmap.Model.FindRoute;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
 
 namespace StarCitizenApi.ArkStarmap
@@ -40,9 +40,9 @@ namespace StarCitizenApi.ArkStarmap
             return Post<Find>("/api/starmap/find", new {Query = query});
         }
 
-        public Task<Result<RouteData>> FindRoute(string departure, string destination, string shipSize)
+        public Task<Result<FindRoute>> FindRoute(string departure, string destination, string shipSize)
         {
-            return Post<RouteData>("/api/starmap/routes/find", new {Departure = departure, Destination = destination, Ship_Size = shipSize});
+            return Post<FindRoute>("/api/starmap/routes/find", new {Departure = departure, Destination = destination, Ship_Size = shipSize});
         }
 
         public async Task<Result<T>> Post<T>(string endpoint, object body)
