@@ -20,32 +20,32 @@ namespace StarCitizenApi.ArkStarmap
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
         private static readonly FileCache FileCache = new FileCache();
 
-        public Task<StarMapResult<BootUpData>> BootUp()
+        public Task<Result<BootUpData>> BootUp()
         {
             return Post<BootUpData>("/api/starmap/bootup", null);
         }
 
-        public Task<StarMapResult<StarSystemData>> StarSystem(string code)
+        public Task<Result<StarSystemData>> StarSystem(string code)
         {
             return Post<StarSystemData>($"/api/starmap/star-systems/{code}", null);
         }
 
-        public Task<StarMapResult<CeletialObjectData>> CelestialObjects(string code)
+        public Task<Result<CeletialObjectData>> CelestialObjects(string code)
         {
             return Post<CeletialObjectData>($"/api/starmap/star-systems/{code}", null);
         }
 
-        public Task<StarMapResult<FindData>> Find(string query)
+        public Task<Result<Find>> Find(string query)
         {
-            return Post<FindData>("/api/starmap/find", new {Query = query});
+            return Post<Find>("/api/starmap/find", new {Query = query});
         }
 
-        public Task<StarMapResult<RouteData>> FindRoute(string departure, string destination, string shipSize)
+        public Task<Result<RouteData>> FindRoute(string departure, string destination, string shipSize)
         {
             return Post<RouteData>("/api/starmap/routes/find", new {Departure = departure, Destination = destination, Ship_Size = shipSize});
         }
 
-        public async Task<StarMapResult<T>> Post<T>(string endpoint, object body)
+        public async Task<Result<T>> Post<T>(string endpoint, object body)
         {
             var json = ToJson(body);
 
@@ -90,9 +90,9 @@ namespace StarCitizenApi.ArkStarmap
                 : JsonConvert.SerializeObject(o, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
         }
 
-        private static StarMapResult<T> FromJson<T>(string value)
+        private static Result<T> FromJson<T>(string value)
         {
-            return JsonConvert.DeserializeObject<StarMapResult<T>>(value);
+            return JsonConvert.DeserializeObject<Result<T>>(value);
         }
     }
 }

@@ -132,14 +132,14 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Vault_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
-    <Compile Include="ArkStarmap\Model\Find\FindData.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\System.cs" />
     <Compile Include="ArkStarmap\Model\Find\Object.cs" />
     <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Route\RouteData.cs" />
     <Compile Include="ArkStarmap\Model\Route\Route.cs" />
     <Compile Include="ArkStarmap\Model\Route\Segment.cs" />
-    <Compile Include="ArkStarmap\Model\StarMapResult.cs" />
+    <Compile Include="ArkStarmap\Model\Result.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystemData.cs" />

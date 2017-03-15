@@ -2,7 +2,7 @@
 
 namespace StarCitizenApi.ArkStarmap.Model
 {
-    public class StarMapResult<TData>
+    public class Result<TData>
     {
         [JsonProperty("success")]
         public int Success { get; set; }
