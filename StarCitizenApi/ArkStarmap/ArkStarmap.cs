@@ -90,6 +90,11 @@ namespace StarCitizenApi.ArkStarmap
             return Post<FindData>("/api/starmap/find", new {Query = query});
         }
 
+        public Task<StarMapResult<RouteData>> FindRoute(string departure, string destination, string shipSize)
+        {
+            return Post<RouteData>("/api/starmap/routes/find", new {Departure = departure, Destination = destination, Ship_Size = shipSize});
+        }
+
         public async Task<StarMapResult<T>> Post<T>(string endpoint, object body)
         {
             var json = ToJson(body);
@@ -117,22 +122,6 @@ namespace StarCitizenApi.ArkStarmap
             FileCache.Put(endpoint, json, content);
 
             return FromJson<T>(content);
-        }
-
-        public async Task<StarMapResult<RouteData>> FindRoute(string departure, string destination, string shipSize)
-        {
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/routes/find")
-            {
-                Content = new StringContent(JsonConvert.SerializeObject(new {Departure = departure, Destination = destination, Ship_Size = shipSize}, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()}), Encoding.UTF8, "application/json")
-            }))
-            {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception();
-                }
-
-                return JsonConvert.DeserializeObject<StarMapResult<RouteData>>(await response.Content.ReadAsStringAsync());
-            }
         }
 
         private static string ToJson(object o)
