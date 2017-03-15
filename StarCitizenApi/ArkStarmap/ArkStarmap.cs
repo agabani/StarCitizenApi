@@ -8,10 +8,10 @@ using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Cache;
 using StarCitizenApi.ArkStarmap.Model;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
-using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 using StarCitizenApi.ArkStarmap.Model.Find;
 using StarCitizenApi.ArkStarmap.Model.FindRoute;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
+using CelestialObjects = StarCitizenApi.ArkStarmap.Model.CelestialObjects.CelestialObjects;
 
 namespace StarCitizenApi.ArkStarmap
 {
@@ -30,9 +30,9 @@ namespace StarCitizenApi.ArkStarmap
             return Post<StarSystems>($"/api/starmap/star-systems/{code}", null);
         }
 
-        public Task<Result<CeletialObjectData>> CelestialObjects(string code)
+        public Task<Result<CelestialObjects>> CelestialObjects(string code)
         {
-            return Post<CeletialObjectData>($"/api/starmap/star-systems/{code}", null);
+            return Post<CelestialObjects>($"/api/starmap/celestial-objects/{code}", null);
         }
 
         public Task<Result<Find>> Find(string query)

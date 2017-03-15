@@ -1,8 +1,9 @@
+using System;
 using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
-    public class Medium
+    public class Media
     {
         [JsonProperty("id")]
         public string id { get; set; }
@@ -14,7 +15,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public string status { get; set; }
 
         [JsonProperty("time_modified")]
-        public string time_modified { get; set; }
+        public DateTime time_modified { get; set; }
 
         [JsonProperty("publish_start")]
         public object publish_start { get; set; }

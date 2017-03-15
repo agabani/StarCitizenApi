@@ -38,7 +38,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Slideshow_Wide slideshow_wide { get; set; }
 
         [JsonProperty("vault_thumb")]
-        public Vault_Thumb vault_thumb { get; set; }
+        public Properties vault_thumb { get; set; }
 
         [JsonProperty("post")]
         public Post post { get; set; }

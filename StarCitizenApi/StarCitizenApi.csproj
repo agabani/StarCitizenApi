@@ -51,6 +51,9 @@
     <Compile Include="ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Cache\FileCache.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\DeletableProperties.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Properties.cs" />
     <Compile Include="ArkStarmap\Model\Paged.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\SystemAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Affiliations.cs" />
@@ -78,10 +81,8 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Bug_Council_Thumbnail.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Channel_Item_Full.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\CeletialObjects.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Component_Description.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Cover.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\CeletialObjectData.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Derived_Data.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Heap_Infobox.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Heap_Note.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Images.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Images1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Logo.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Medium.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Media.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Post.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Post_Section_Header.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Press_Latest_Post.cs" />
@@ -105,7 +106,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Product_Thumb_Large.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Product_Thumb_Medium_And_Small.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Product_Thumb_Shipmod.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Resultset.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Ring.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Shader_Data.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Shader_Data1.cs" />

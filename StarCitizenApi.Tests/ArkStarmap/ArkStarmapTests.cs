@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using StarCitizenApi.ArkStarmap.Model;
+using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 
 namespace StarCitizenApi.Tests.ArkStarmap
 {
