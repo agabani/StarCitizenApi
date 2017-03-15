@@ -52,8 +52,8 @@
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Cache\FileCache.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\DeletableProperties.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Properties.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DeletableProperties.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Properties.cs" />
     <Compile Include="ArkStarmap\Model\Paged.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\SystemAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Affiliations.cs" />

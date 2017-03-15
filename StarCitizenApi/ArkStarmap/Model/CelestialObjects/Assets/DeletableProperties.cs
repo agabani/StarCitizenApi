@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
+namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets
 {
     public class DeletableProperties<THeight> : Properties<THeight>
     {
         [JsonProperty("delete")]
-        public string delete { get; set; }
+        public string Delete { get; set; }
     }
 }
