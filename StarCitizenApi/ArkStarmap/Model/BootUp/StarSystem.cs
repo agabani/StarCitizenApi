@@ -5,7 +5,7 @@ using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class System
+    public class StarSystem
     {
         [JsonProperty("id")]
         public string Id { get; set; }
