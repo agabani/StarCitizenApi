@@ -5,49 +5,74 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using StarCitizenApi.ArkStarmap.Cache;
 using StarCitizenApi.ArkStarmap.Model;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 using StarCitizenApi.ArkStarmap.Model.Find;
 using StarCitizenApi.ArkStarmap.Model.Route;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
-using Data = StarCitizenApi.ArkStarmap.Model.CelestialObjects.Data;
-using Route = StarCitizenApi.ArkStarmap.Model.BootUp.Route;
-using StarSystem = StarCitizenApi.ArkStarmap.Model.StarSystem.StarSystem;
 
 namespace StarCitizenApi.ArkStarmap
 {
     public class ArkStarmap
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
+        private static readonly FileCache FileCache = new FileCache();
 
         public async Task<StarMapResult<BootUpData>> BootUp()
         {
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/bootup")))
+            const string endpoint = "/api/starmap/bootup";
+
+            var content = FileCache.Get(endpoint, null);
+
+            if (content != null)
+            {
+                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(content);
+            }
+
+            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(await response.Content.ReadAsStringAsync());
+                var value = await response.Content.ReadAsStringAsync();
+
+                FileCache.Put(endpoint, null, value);
+
+                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(value);
             }
         }
 
         public async Task<StarMapResult<StarSystemData>> StarSystem(string code)
         {
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
+            var endpoint = $"/api/starmap/star-systems/{code}";
+
+            var content = FileCache.Get(endpoint, null);
+
+            if (content != null)
+            {
+                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(content);
+            }
+
+            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(await response.Content.ReadAsStringAsync());
+                var value = await response.Content.ReadAsStringAsync();
+
+                FileCache.Put(endpoint, null, value);
+
+                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(value);
             }
         }
 
-        public async Task<StarCitizenApi.ArkStarmap.Model.CelestialObjects.CeletialObjects> CelestialObjects(string code)
+        public async Task<CeletialObjects> CelestialObjects(string code)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
             {
@@ -56,7 +81,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarCitizenApi.ArkStarmap.Model.CelestialObjects.CeletialObjects>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<CeletialObjects>(await response.Content.ReadAsStringAsync());
             }
         }
 
