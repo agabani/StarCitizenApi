@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class SystemResultSet
+    public class System
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -39,7 +39,7 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public object InfoUrl { get; set; }
 
         [JsonProperty("affiliation")]
-        public Affiliation[] Affiliation { get; set; }
+        public SystemAffiliation[] Affiliation { get; set; }
 
         [JsonProperty("aggregated_size")]
         public string AggregatedSize { get; set; }

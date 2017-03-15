@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class AffiliationResultSet
+    public class Specie
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -12,8 +12,5 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
 
         [JsonProperty("code")]
         public string Code { get; set; }
-
-        [JsonProperty("color")]
-        public string Color { get; set; }
     }
 }

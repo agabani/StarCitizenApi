@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class TunnelResultSet
+    public class Tunnel
     {
         [JsonProperty("id")]
         public string Id { get; set; }

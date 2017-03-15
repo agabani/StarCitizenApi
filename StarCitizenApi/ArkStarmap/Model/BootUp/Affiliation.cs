@@ -15,8 +15,5 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
 
         [JsonProperty("color")]
         public string Color { get; set; }
-
-        [JsonProperty("membership.id")]
-        public string MembershipId { get; set; }
     }
 }
