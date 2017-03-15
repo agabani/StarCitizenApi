@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.BootUp.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
@@ -14,12 +15,12 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public Stars Stars { get; set; }
 
         [JsonProperty("routes")]
-        public Route[] Routes { get; set; }
+        public ShaderData.Route[] Routes { get; set; }
 
         [JsonProperty("starfield")]
         public Starfield Starfield { get; set; }
 
         [JsonProperty("longRangeScanner")]
-        public Longrangescanner LongRangeScanner { get; set; }
+        public LongRangeScanner LongRangeScanner { get; set; }
     }
 }

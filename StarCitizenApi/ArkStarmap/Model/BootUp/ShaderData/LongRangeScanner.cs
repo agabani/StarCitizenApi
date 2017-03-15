@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp
+namespace StarCitizenApi.ArkStarmap.Model.BootUp.ShaderData
 {
-    public class Longrangescanner
+    public class LongRangeScanner
     {
         [JsonProperty("radius")]
         public double Radius { get; set; }
