@@ -56,7 +56,9 @@ namespace StarCitizenApi.Tests.ArkStarmap
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
-            var celestialObjects = await arkStarmap.CelestialObjects(code);
+            var result = await arkStarmap.CelestialObjects(code);
+
+            Assert.That(result.Data.ResultSet.All(r => r.Children.All(c => c.id != null)));
         }
 
         [Test]
