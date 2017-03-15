@@ -75,7 +75,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Media.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Ring.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\CelestialShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\CelestialShaderData.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\ChildShaderData.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Sizes.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
@@ -94,9 +94,9 @@
     <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
-    <Compile Include="ArkStarmap\Model\Shared\ShaderData\PhysicsRing.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemRing.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\CelestialShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemCelestialShaderData.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Sun.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\Texture.cs" />

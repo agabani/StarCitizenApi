@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
-    public class PhysicsRing : Ring
+    public class SystemRing : Ring
     {
         [JsonProperty("speed")]
         public double Speed { get; set; }

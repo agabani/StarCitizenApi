@@ -2,7 +2,7 @@ using System;
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
-using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
+using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
@@ -75,7 +75,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public string SensorDanger { get; set; }
 
         [JsonProperty("shader_data")]
-        public CelestialShaderData ShaderData { get; set; }
+        public SystemCelestialShaderData ShaderData { get; set; }
 
         [JsonProperty("size")]
         public string Size { get; set; }

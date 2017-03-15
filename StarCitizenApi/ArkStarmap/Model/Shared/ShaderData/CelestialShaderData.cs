@@ -1,7 +1,6 @@
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
+namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
     public class CelestialShaderData
     {
@@ -14,14 +13,8 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
         [JsonProperty("orbitalFactor")]
         public double OrbitalFactor { get; set; }
 
-        [JsonProperty("sun")]
-        public Sun Sun { get; set; }
-
-        [JsonProperty("radius")]
-        public double Radius { get; set; }
-
         [JsonProperty("ring")]
-        public PhysicsRing Ring { get; set; }
+        public Ring Ring { get; set; }
 
         [JsonProperty("highlight")]
         public Highlight Highlight { get; set; }
@@ -31,8 +24,5 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
 
         [JsonProperty("orbitalHighlightColor")]
         public string OrbitalHighlightColor { get; set; }
-
-        [JsonProperty("fullturn")]
-        public double Fullturn { get; set; }
     }
 }
