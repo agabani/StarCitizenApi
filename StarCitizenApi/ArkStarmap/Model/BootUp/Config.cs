@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.BootUp.ShaderData;
+using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp.ShaderData
+namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
     public class Starfield
     {

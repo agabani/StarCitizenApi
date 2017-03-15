@@ -67,7 +67,6 @@
     <Compile Include="ArkStarmap\Model\BootUp\Specie.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Route.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Stars.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DerivedData.cs" />
@@ -98,7 +97,7 @@
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\PhysicsRing.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\CelestialShaderData.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Starfield.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Sun.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\Texture.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\Thumbnail.cs" />
