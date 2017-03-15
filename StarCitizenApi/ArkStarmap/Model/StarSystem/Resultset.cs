@@ -1,9 +1,10 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
-    public class Resultset
+    public class ResultSet
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -48,7 +49,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public string Description { get; set; }
 
         [JsonProperty("shader_data")]
-        public ShaderData ShaderData { get; set; }
+        public StarSystemShaderData ShaderData { get; set; }
 
         [JsonProperty("affiliation")]
         public Affiliation[] Affiliation { get; set; }

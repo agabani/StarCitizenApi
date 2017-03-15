@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem
+namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
 {
-    public class ShaderData
+    public class StarSystemShaderData
     {
         [JsonProperty("lightColor")]
         public string LightColor { get; set; }

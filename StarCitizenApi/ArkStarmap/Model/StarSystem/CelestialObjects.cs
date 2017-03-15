@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
@@ -87,7 +88,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public Subtype Subtype { get; set; }
 
         [JsonProperty("affiliation")]
-        public CelestialAffiliation[] Affiliation { get; set; }
+        public Affiliation[] Affiliation { get; set; }
 
         [JsonProperty("population")]
         public object[] Population { get; set; }
