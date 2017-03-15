@@ -15,7 +15,7 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public Stars Stars { get; set; }
 
         [JsonProperty("routes")]
-        public ShaderData.Route[] Routes { get; set; }
+        public Route[] Routes { get; set; }
 
         [JsonProperty("starfield")]
         public Starfield Starfield { get; set; }

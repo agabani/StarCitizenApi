@@ -8,15 +8,15 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public Config Config { get; set; }
 
         [JsonProperty("systems")]
-        public Systems Systems { get; set; }
+        public Paged<System> Systems { get; set; }
 
         [JsonProperty("tunnels")]
-        public Tunnels Tunnels { get; set; }
+        public Paged<Tunnel> Tunnels { get; set; }
 
         [JsonProperty("species")]
-        public Species Species { get; set; }
+        public Paged<Specie> Species { get; set; }
 
         [JsonProperty("affiliations")]
-        public Affiliations Affiliations { get; set; }
+        public Paged<Affiliation> Affiliations { get; set; }
     }
 }

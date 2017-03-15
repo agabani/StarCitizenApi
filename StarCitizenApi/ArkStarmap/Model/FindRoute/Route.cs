@@ -14,7 +14,7 @@ namespace StarCitizenApi.ArkStarmap.Model.FindRoute
         public string FirstJump { get; set; }
 
         [JsonProperty("flight_distance")]
-        public float FlightDistance { get; set; }
+        public double FlightDistance { get; set; }
 
         [JsonProperty("jumps")]
         public int Jumps { get; set; }
