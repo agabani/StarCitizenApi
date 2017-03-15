@@ -137,7 +137,6 @@
     <Compile Include="ArkStarmap\Model\Find\ObjectResultSet.cs" />
     <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Find\Systems.cs" />
-    <Compile Include="ArkStarmap\Model\Route\FindRoute.cs" />
     <Compile Include="ArkStarmap\Model\Route\RouteData.cs" />
     <Compile Include="ArkStarmap\Model\Route\Route.cs" />
     <Compile Include="ArkStarmap\Model\Route\Segment.cs" />
