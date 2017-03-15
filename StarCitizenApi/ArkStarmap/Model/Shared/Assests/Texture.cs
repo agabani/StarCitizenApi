@@ -1,7 +1,8 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.StarSystem.Assests;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
+namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
 {
     public class Texture
     {
@@ -12,6 +13,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
         public Uri Source { get; set; }
 
         [JsonProperty("images")]
-        public TextureImage TextureImages { get; set; }
+        public TextureImage Images { get; set; }
     }
 }

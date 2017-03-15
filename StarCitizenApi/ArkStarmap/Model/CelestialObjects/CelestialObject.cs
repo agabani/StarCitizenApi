@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData;
 using StarCitizenApi.ArkStarmap.Model.Shared;
+using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
