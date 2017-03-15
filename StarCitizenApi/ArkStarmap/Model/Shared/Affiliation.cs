@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
     public class Affiliation
     {

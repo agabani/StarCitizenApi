@@ -2,6 +2,7 @@ using System;
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets;
 using StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
@@ -89,7 +90,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Subtype Subtype { get; set; }
 
         [JsonProperty("affiliation")]
-        public Affiliation[] Affiliation { get; set; }
+        public MemberedAffiliation[] Affiliation { get; set; }
 
         [JsonProperty("population")]
         public object[] Population { get; set; }

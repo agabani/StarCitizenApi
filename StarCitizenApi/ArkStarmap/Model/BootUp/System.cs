@@ -1,6 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.BootUp.Assets;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
@@ -40,7 +41,7 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public object InfoUrl { get; set; }
 
         [JsonProperty("affiliation")]
-        public SystemAffiliation[] Affiliation { get; set; }
+        public MemberedAffiliation[] Affiliation { get; set; }
 
         [JsonProperty("aggregated_size")]
         public string AggregatedSize { get; set; }

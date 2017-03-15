@@ -55,7 +55,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DeletableProperties.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Properties.cs" />
     <Compile Include="ArkStarmap\Model\Paged.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\SystemAffiliation.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\MemberedAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\BootUpData.cs" />
@@ -65,12 +65,11 @@
     <Compile Include="ArkStarmap\Model\BootUp\System.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Tunnel.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Specie.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\Affiliation.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Route.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Stars.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Assets\Thumbnail.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DerivedData.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\Highlight.cs" />
@@ -93,7 +92,6 @@
     <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />
     <Compile Include="ArkStarmap\Model\Result.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Highlight.cs" />
