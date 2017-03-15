@@ -34,7 +34,7 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<StarSystem> StarSystem(string code)
+        public async Task<StarMapResult<StarSystemData>> StarSystem(string code)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
             {
@@ -43,11 +43,11 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarSystem>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(await response.Content.ReadAsStringAsync());
             }
         }
 
-        public async Task<StarMapResult<Data>> CelestialObjects(string code)
+        public async Task<StarCitizenApi.ArkStarmap.Model.CelestialObjects.CeletialObjects> CelestialObjects(string code)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
             {
@@ -56,7 +56,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarMapResult<Data>>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarCitizenApi.ArkStarmap.Model.CelestialObjects.CeletialObjects>(await response.Content.ReadAsStringAsync());
             }
         }
 

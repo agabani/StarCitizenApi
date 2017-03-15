@@ -8,7 +8,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public int Success { get; set; }
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public StarSystemData Data { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
