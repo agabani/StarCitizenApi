@@ -87,9 +87,20 @@ namespace StarCitizenApi.ArkStarmap
 
         public async Task<StarMapResult<FindData>> Find(string query)
         {
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/find")
+            const string endpoint = "/api/starmap/find";
+
+            var body = JsonConvert.SerializeObject(new {Query = query}, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
+
+            var content = FileCache.Get(endpoint, body);
+
+            if (content != null)
             {
-                Content = new StringContent(JsonConvert.SerializeObject(new {Query = query}, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()}), Encoding.UTF8, "application/json")
+                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(content);
+            }
+
+            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)
+            {
+                Content = new StringContent(body, Encoding.UTF8, "application/json")
             }))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
@@ -97,7 +108,11 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(await response.Content.ReadAsStringAsync());
+                var value = await response.Content.ReadAsStringAsync();
+
+                FileCache.Put(endpoint, body, value);
+
+                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(value);
             }
         }
 

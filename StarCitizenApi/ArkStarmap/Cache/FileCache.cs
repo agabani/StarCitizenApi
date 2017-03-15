@@ -15,7 +15,7 @@ namespace StarCitizenApi.ArkStarmap.Cache
 
         public void Put(string endpoint, string body, string content)
         {
-            var fileName = FileName(endpoint);
+            var fileName = FileName(endpoint, body);
 
             File.WriteAllText($"C:\\Cache\\{fileName}", content, Encoding.UTF8);
         }
