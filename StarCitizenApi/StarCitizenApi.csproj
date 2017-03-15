@@ -131,6 +131,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Vault_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Class1.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />

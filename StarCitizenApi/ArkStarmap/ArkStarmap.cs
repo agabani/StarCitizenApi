@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
+using StarCitizenApi.ArkStarmap.Model.Find;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
 
 namespace StarCitizenApi.ArkStarmap
@@ -48,6 +51,23 @@ namespace StarCitizenApi.ArkStarmap
                 }
 
                 return JsonConvert.DeserializeObject<CelestialObjects>(await response.Content.ReadAsStringAsync());
+            }
+        }
+
+        public async Task<Find> Find(string query)
+        {
+            var serializeObject = JsonConvert.SerializeObject(new {Query = query}, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
+            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/find")
+            {
+                Content = new StringContent(serializeObject, Encoding.UTF8, "application/json")
+            }))
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception();
+                }
+
+                return JsonConvert.DeserializeObject<Find>(await response.Content.ReadAsStringAsync());
             }
         }
     }

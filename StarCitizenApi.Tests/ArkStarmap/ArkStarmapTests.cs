@@ -15,19 +15,35 @@ namespace StarCitizenApi.Tests.ArkStarmap
         }
 
         [Test]
-        public async Task StarSystem()
+        [TestCase("SOL")]
+        [TestCase("STANTON")]
+        public async Task StarSystem(string code)
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
-            var result = await arkStarmap.StarSystem("SOL");
+            var result = await arkStarmap.StarSystem(code);
         }
 
         [Test]
-        public async Task CelestialObjects()
+        [TestCase("SOL.STARS.SOL")]
+        [TestCase("SOL.PLANETS.JUPITER")]
+        [TestCase("SOL.JUMPPOINTS.DAVIEN")]
+        [TestCase("SOL.BELTS.KEUPERBELT")]
+        [TestCase("STANTON.STATION.PORTOLISAR")]
+        public async Task CelestialObjects(string code)
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
-            var celestialObjects = await arkStarmap.CelestialObjects("SOL.PLANETS.JUPITER");
+            var celestialObjects = await arkStarmap.CelestialObjects(code);
+        }
+
+        [Test]
+        [TestCase("SOL")]
+        public async Task Find(string query)
+        {
+            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+
+            var find = await arkStarmap.Find(query);
         }
     }
 }
