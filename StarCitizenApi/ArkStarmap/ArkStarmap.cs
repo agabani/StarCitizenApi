@@ -85,17 +85,18 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<StarMapResult<FindData>> Find(string query)
+        public Task<StarMapResult<FindData>> Find(string query)
         {
-            const string endpoint = "/api/starmap/find";
+            return Post<FindData>("/api/starmap/find", ToJson(new {Query = query}));
+        }
 
-            var body = JsonConvert.SerializeObject(new {Query = query}, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
-
+        public async Task<StarMapResult<T>> Post<T>(string endpoint, string body)
+        {
             var content = FileCache.Get(endpoint, body);
 
             if (content != null)
             {
-                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(content);
+                return FromJson<T>(content);
             }
 
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)
@@ -108,12 +109,12 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                var value = await response.Content.ReadAsStringAsync();
-
-                FileCache.Put(endpoint, body, value);
-
-                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(value);
+                content = await response.Content.ReadAsStringAsync();
             }
+
+            FileCache.Put(endpoint, body, content);
+
+            return FromJson<T>(content);
         }
 
         public async Task<StarMapResult<RouteData>> FindRoute(string departure, string destination, string shipSize)
@@ -130,6 +131,16 @@ namespace StarCitizenApi.ArkStarmap
 
                 return JsonConvert.DeserializeObject<StarMapResult<RouteData>>(await response.Content.ReadAsStringAsync());
             }
+        }
+
+        private static string ToJson(object o)
+        {
+            return JsonConvert.SerializeObject(o, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
+        }
+
+        private static StarMapResult<T> FromJson<T>(string value)
+        {
+            return JsonConvert.DeserializeObject<StarMapResult<T>>(value);
         }
     }
 }
