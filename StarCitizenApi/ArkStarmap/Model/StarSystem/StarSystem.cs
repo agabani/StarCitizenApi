@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
-    public class StarSystemData
+    public class StarSystem
     {
         [JsonProperty("rowcount")]
         public int RowCount { get; set; }

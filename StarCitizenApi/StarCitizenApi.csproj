@@ -142,7 +142,7 @@
     <Compile Include="ArkStarmap\Model\Result.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\StarSystemData.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Highlight.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\TextureImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\ThumbnailImage.cs" />
