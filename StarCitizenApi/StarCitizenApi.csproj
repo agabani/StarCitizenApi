@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE9C2C47-9BD1-4763-861E-1403FD192708}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarCitizenApi</RootNamespace>
+    <AssemblyName>StarCitizenApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiClient.cs" />
+    <Compile Include="ArkStarmap\ArkStarmap.cs" />
+    <Compile Include="ArkStarmap\Cache\FileCache.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DeletableProperties.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Properties.cs" />
+    <Compile Include="ArkStarmap\Model\Paged.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\MemberedAffiliation.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\BootUp.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Entry.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Exit.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\ShaderData\LongRangeScanner.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\StarSystem.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Tunnel.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\Specie.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Affiliation.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Route.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Stars.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DerivedData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\Highlight.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\MediaImages.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Media.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObject.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\Ring.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\CelestialShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\ChildShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Sizes.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\ShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Subtype.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Find.cs" />
+    <Compile Include="ArkStarmap\Model\Find\System.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Object.cs" />
+    <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
+    <Compile Include="ArkStarmap\Model\FindRoute\FindRoute.cs" />
+    <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
+    <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />
+    <Compile Include="ArkStarmap\Model\Result.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\CelestialObject.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Assests\TextureImage.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemRing.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemCelestialShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\Starfield.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Sun.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Assests\Texture.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Assests\Thumbnail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
