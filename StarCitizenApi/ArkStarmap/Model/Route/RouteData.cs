@@ -2,7 +2,7 @@
 
 namespace StarCitizenApi.ArkStarmap.Model.Route
 {
-    public class Data
+    public class RouteData
     {
         [JsonProperty("shortest")]
         public Route Shortest { get; set; }

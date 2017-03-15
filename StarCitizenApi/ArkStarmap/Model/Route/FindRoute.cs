@@ -8,7 +8,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Route
         public int Success { get; set; }
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public RouteData Data { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }

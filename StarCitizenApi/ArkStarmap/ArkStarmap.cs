@@ -76,7 +76,7 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<FindRoute> FindRoute(string departure, string destination, string shipSize)
+        public async Task<StarMapResult<RouteData>> FindRoute(string departure, string destination, string shipSize)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/routes/find")
             {
@@ -88,7 +88,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<FindRoute>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarMapResult<RouteData>>(await response.Content.ReadAsStringAsync());
             }
         }
     }
