@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.StarSystem.Assests;
 using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem

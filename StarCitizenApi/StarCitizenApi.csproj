@@ -144,19 +144,19 @@
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystemData.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Highlight.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\TextureImage.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\ThumbnailImage.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\PlanetsSize.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Highlight.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\Assests\TextureImage.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\Assests\ThumbnailImage.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Ring.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Ring.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\CelestialShaderData.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Starfield.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Subtype.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Sun.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Texture.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Thumbnail.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Sun.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\Assests\Texture.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\Assests\Thumbnail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 using System;
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem
+namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
 {
-    public class Thumbnail
+    public class Texture
     {
         [JsonProperty("slug")]
         public string Slug { get; set; }
@@ -12,6 +12,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public Uri Source { get; set; }
 
         [JsonProperty("images")]
-        public ThumbnailImage Images { get; set; }
+        public TextureImage TextureImages { get; set; }
     }
 }
