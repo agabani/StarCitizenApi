@@ -1,9 +1,17 @@
+using System;
+using Newtonsoft.Json;
+
 namespace StarCitizenApi.ArkStarmap.Model
 {
     public class Images
     {
-        public string post { get; set; }
-        public string product_thumb_large { get; set; }
-        public string subscribers_vault_thumbnail { get; set; }
+        [JsonProperty("post")]
+        public Uri Post { get; set; }
+
+        [JsonProperty("product_thumb_large")]
+        public Uri ProductThumbLarge { get; set; }
+
+        [JsonProperty("subscribers_vault_thumbnail")]
+        public Uri SubscribersVaultThumbnail { get; set; }
     }
 }

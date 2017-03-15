@@ -1,12 +1,25 @@
+using Newtonsoft.Json;
+
 namespace StarCitizenApi.ArkStarmap.Model
 {
     public class Starfield
     {
-        public int radius { get; set; }
-        public int count { get; set; }
-        public int sizeMin { get; set; }
-        public int sizeMax { get; set; }
-        public string color1 { get; set; }
-        public string color2 { get; set; }
+        [JsonProperty("radius")]
+        public double Radius { get; set; }
+
+        [JsonProperty("count")]
+        public double Count { get; set; }
+
+        [JsonProperty("sizeMin")]
+        public double SizeMin { get; set; }
+
+        [JsonProperty("sizeMax")]
+        public double SizeMax { get; set; }
+
+        [JsonProperty("color1")]
+        public string Color1 { get; set; }
+
+        [JsonProperty("color2")]
+        public string Color2 { get; set; }
     }
 }
