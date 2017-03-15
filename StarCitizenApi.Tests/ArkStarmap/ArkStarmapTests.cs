@@ -45,5 +45,14 @@ namespace StarCitizenApi.Tests.ArkStarmap
 
             var find = await arkStarmap.Find(query);
         }
+
+        [Test]
+        [TestCase("SOL.PLANETS.EARTH", "STANTON.STATION.PORTOLISAR", "L")]
+        public async Task FindRoute(string departure, string destination, string shipSize)
+        {
+            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+
+            var find = await arkStarmap.FindRoute(departure, destination, shipSize);
+        }
     }
 }
