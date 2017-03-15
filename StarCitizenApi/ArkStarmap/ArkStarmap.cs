@@ -46,30 +46,11 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<StarMapResult<StarSystemData>> StarSystem(string code)
+        public Task<StarMapResult<StarSystemData>> StarSystem(string code)
         {
             var endpoint = $"/api/starmap/star-systems/{code}";
 
-            var content = FileCache.Get(endpoint, null);
-
-            if (content != null)
-            {
-                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(content);
-            }
-
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)))
-            {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception();
-                }
-
-                var value = await response.Content.ReadAsStringAsync();
-
-                FileCache.Put(endpoint, null, value);
-
-                return JsonConvert.DeserializeObject<StarMapResult<StarSystemData>>(value);
-            }
+            return Post<StarSystemData>(endpoint, null);
         }
 
         public async Task<CeletialObjects> CelestialObjects(string code)
@@ -106,10 +87,7 @@ namespace StarCitizenApi.ArkStarmap
                 return FromJson<T>(content);
             }
 
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)
-            {
-                Content = new StringContent(json, Encoding.UTF8, "application/json")
-            }))
+            using (var response = await Client.Send(PostRequest<T>(endpoint, json)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -124,9 +102,23 @@ namespace StarCitizenApi.ArkStarmap
             return FromJson<T>(content);
         }
 
+        private static HttpRequestMessage PostRequest<T>(string endpoint, string json)
+        {
+            if (json == null)
+            {
+                return new HttpRequestMessage(HttpMethod.Post, endpoint);
+            }
+
+            return new HttpRequestMessage(HttpMethod.Post, endpoint)
+            {
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+        }
+
         private static string ToJson(object o)
         {
-            return JsonConvert.SerializeObject(o, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
+            return o == null ? null
+                : JsonConvert.SerializeObject(o, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
         }
 
         private static StarMapResult<T> FromJson<T>(string value)
