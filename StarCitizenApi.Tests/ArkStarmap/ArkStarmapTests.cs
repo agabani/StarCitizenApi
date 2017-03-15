@@ -14,12 +14,12 @@ namespace StarCitizenApi.Tests.ArkStarmap
             var result = await arkStarmap.BootUp();
         }
 
-       /* [Test]
+        [Test]
         public async Task StarSystem()
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
             var result = await arkStarmap.StarSystem("SOL");
-        }*/
+        }
     }
 }
