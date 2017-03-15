@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
-    public class Subtype
+    public class SubType
     {
         [JsonProperty("id")]
         public string Id { get; set; }
