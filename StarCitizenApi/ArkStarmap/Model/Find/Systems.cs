@@ -29,6 +29,6 @@ namespace StarCitizenApi.ArkStarmap.Model.Find
         public int StartRow { get; set; }
 
         [JsonProperty("resultset")]
-        public ResultSet[] ResultSet { get; set; }
+        public System[] ResultSet { get; set; }
     }
 }

@@ -134,8 +134,8 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\Find\FindData.cs" />
     <Compile Include="ArkStarmap\Model\Find\Objects.cs" />
-    <Compile Include="ArkStarmap\Model\Find\ResultSet.cs" />
-    <Compile Include="ArkStarmap\Model\Find\ObjectResultSet.cs" />
+    <Compile Include="ArkStarmap\Model\Find\System.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Object.cs" />
     <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Find\Systems.cs" />
     <Compile Include="ArkStarmap\Model\Route\RouteData.cs" />
