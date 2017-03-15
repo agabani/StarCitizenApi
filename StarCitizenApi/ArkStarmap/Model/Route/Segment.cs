@@ -29,7 +29,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Route
         public string SegmentType { get; set; }
 
         [JsonProperty("segment_distance")]
-        public float? SegmentDistance { get; set; }
+        public double? SegmentDistance { get; set; }
 
         [JsonProperty("is_departure")]
         public object IsDeparture { get; set; }

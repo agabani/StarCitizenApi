@@ -54,7 +54,6 @@
     <Compile Include="ArkStarmap\Model\BootUp\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Affiliations.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\BootUp.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\BootUpData.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Entry.cs" />
@@ -132,18 +131,16 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Vault_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
-    <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\FindData.cs" />
     <Compile Include="ArkStarmap\Model\Find\Objects.cs" />
     <Compile Include="ArkStarmap\Model\Find\Resultset.cs" />
-    <Compile Include="ArkStarmap\Model\Find\Resultset1.cs" />
+    <Compile Include="ArkStarmap\Model\Find\ObjectResultSet.cs" />
     <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Find\Systems.cs" />
     <Compile Include="ArkStarmap\Model\Route\FindRoute.cs" />
     <Compile Include="ArkStarmap\Model\Route\RouteData.cs" />
     <Compile Include="ArkStarmap\Model\Route\Route.cs" />
     <Compile Include="ArkStarmap\Model\Route\Segment.cs" />
-    <Compile Include="ArkStarmap\Model\Route\Shortest.cs" />
     <Compile Include="ArkStarmap\Model\StarMapResult.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialAffiliation.cs" />

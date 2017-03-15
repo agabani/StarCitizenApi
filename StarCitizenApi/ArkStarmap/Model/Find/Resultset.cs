@@ -2,7 +2,7 @@
 
 namespace StarCitizenApi.ArkStarmap.Model.Find
 {
-    public class Resultset
+    public class ResultSet
     {
         [JsonProperty("id")]
         public string Id { get; set; }

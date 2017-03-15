@@ -21,15 +21,15 @@ namespace StarCitizenApi.Tests.ArkStarmap
 
             // Config
             Assert.That(result.Data.Config.Routes, Is.Not.Empty);
-            Assert.That(result.Data.Config.Starfield, Is.Not.Null);
-            Assert.That(result.Data.Config.LongRangeScanner, Is.Not.Null);
+            Assert.That(result.Data.Config.Routes.All(r => r.Color != null));
+            Assert.That(result.Data.Config.Starfield.Color1, Is.Not.Null);
+            Assert.That(result.Data.Config.LongRangeScanner.ColorC1, Is.Not.Null);
 
             // Species
-            Assert.That(result.Data.Species, Is.Not.Null);
-            Assert.That(result.Data.Species.ResultSet, Is.Not.Empty);
+            Assert.That(result.Data.Species.ResultSet.All(r => r.Id != null));
 
             // Systems
-            Assert.That(result.Data.Systems.ResultSet, Is.Not.Empty);
+            Assert.That(result.Data.Systems.ResultSet.All(r => r.Id != null));
             foreach (var resultSet in result.Data.Systems.ResultSet)
             {
                 Assert.That(resultSet.Affiliation.All(affiliation => affiliation.MembershipId != null));
@@ -63,7 +63,13 @@ namespace StarCitizenApi.Tests.ArkStarmap
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
-            var find = await arkStarmap.Find(query);
+
+            var result = await arkStarmap.Find(query);
+
+            Assert.That(result.Success, Is.EqualTo(1));
+
+            Assert.That(result.Data.Systems.ResultSet.All(r => r.Id != null));
+            Assert.That(result.Data.Objects.ResultSet.All(r => r.Id != null));
         }
 
         [Test]
@@ -72,7 +78,10 @@ namespace StarCitizenApi.Tests.ArkStarmap
         {
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
-            var find = await arkStarmap.FindRoute(departure, destination, shipSize);
+            var result = await arkStarmap.FindRoute(departure, destination, shipSize);
+
+            Assert.That(result.Data.LeastJumps.Segments.All(s => s.Id != null));
+            Assert.That(result.Data.Shortest.Segments.All(s => s.Id != null));
         }
 
         [Test]
@@ -83,6 +92,8 @@ namespace StarCitizenApi.Tests.ArkStarmap
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
             var result = await arkStarmap.StarSystem(code);
+
+            Assert.That(result.Data.ResultSet.All(r => r.CelestialObjects.All(c => c.Affiliation.All(a => a.Id != null))));
         }
     }
 }
