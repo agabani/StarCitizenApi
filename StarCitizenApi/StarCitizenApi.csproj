@@ -70,6 +70,7 @@
     <Compile Include="ArkStarmap\Model\BootUp\Systems.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Thumbnail.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Tunnels.cs" />
+    <Compile Include="ArkStarmap\Model\CelestialObjects\Class1.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Affiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
