@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.BootUp.Assets;
 using StarCitizenApi.ArkStarmap.Model.Shared;
+using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
@@ -56,6 +56,6 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public double AggregatedDanger { get; set; }
 
         [JsonProperty("thumbnail")]
-        public Thumbnail Thumbnail { get; set; }
+        public Thumbnail<object> Thumbnail { get; set; }
     }
 }

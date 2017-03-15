@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
+namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
 {
     public class ThumbnailImage
     {

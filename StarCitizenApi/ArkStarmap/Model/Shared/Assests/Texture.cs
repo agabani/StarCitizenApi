@@ -1,6 +1,5 @@
 using System;
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.StarSystem.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
 {

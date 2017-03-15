@@ -1,9 +1,9 @@
 using System;
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
+namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
 {
-    public class Thumbnail
+    public class Thumbnail<TImage>
     {
         [JsonProperty("slug")]
         public string Slug { get; set; }
@@ -12,6 +12,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.Assests
         public Uri Source { get; set; }
 
         [JsonProperty("images")]
-        public ThumbnailImage Images { get; set; }
+        public TImage Images { get; set; }
     }
 }

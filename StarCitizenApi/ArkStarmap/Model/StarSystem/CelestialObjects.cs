@@ -2,7 +2,6 @@ using System;
 using Newtonsoft.Json;
 using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
-using StarCitizenApi.ArkStarmap.Model.StarSystem.Assests;
 using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
@@ -100,6 +99,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public Texture Texture { get; set; }
 
         [JsonProperty("thumbnail")]
-        public Thumbnail Thumbnail { get; set; }
+        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
     }
 }
