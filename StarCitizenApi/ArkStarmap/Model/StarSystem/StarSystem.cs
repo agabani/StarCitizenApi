@@ -56,7 +56,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public MemberedAffiliation[] Affiliation { get; set; }
 
         [JsonProperty("celestial_objects")]
-        public CelestialObjects[] CelestialObjects { get; set; }
+        public CelestialObject[] CelestialObjects { get; set; }
 
         [JsonProperty("aggregated_size")]
         public string AggregatedSize { get; set; }

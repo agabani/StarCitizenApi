@@ -6,7 +6,7 @@ using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
-    public class CelestialObjects
+    public class CelestialObject
     {
         [JsonProperty("id")]
         public string Id { get; set; }
