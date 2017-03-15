@@ -5,12 +5,12 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
     public class Subtype
     {
         [JsonProperty("id")]
-        public string id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("type")]
-        public string type { get; set; }
+        public string Type { get; set; }
     }
 }

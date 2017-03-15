@@ -1,8 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using StarCitizenApi.ArkStarmap.Model;
-using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 
 namespace StarCitizenApi.Tests.ArkStarmap
 {
@@ -58,7 +56,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
 
             var result = await arkStarmap.CelestialObjects(code);
 
-            Assert.That(result.Data.ResultSet.All(r => r.Children.All(c => c.id != null)));
+            Assert.That(result.Data.ResultSet.All(r => r.Children.All(c => c.Id != null)));
         }
 
         [Test]

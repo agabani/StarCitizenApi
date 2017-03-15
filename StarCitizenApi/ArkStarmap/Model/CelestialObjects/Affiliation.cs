@@ -5,18 +5,18 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
     public class Affiliation
     {
         [JsonProperty("id")]
-        public string id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("code")]
-        public string code { get; set; }
+        public string Code { get; set; }
 
         [JsonProperty("color")]
-        public string color { get; set; }
+        public string Color { get; set; }
 
-        [JsonProperty("membershipid")]
-        public string membershipid { get; set; }
+        [JsonProperty("membership.id")]
+        public string MembershipId { get; set; }
     }
 }

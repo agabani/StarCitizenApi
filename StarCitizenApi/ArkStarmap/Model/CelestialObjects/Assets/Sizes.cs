@@ -1,20 +1,20 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
+namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets
 {
     public class Sizes
     {
         [JsonProperty("heap_note")]
-        public Heap_Note heap_note { get; set; }
+        public DeletableProperties<int?> HeapNote { get; set; }
 
         [JsonProperty("heap_thumb")]
-        public Heap_Thumb heap_thumb { get; set; }
+        public DeletableProperties<int?> HeapThumb { get; set; }
 
         [JsonProperty("heap_infobox")]
-        public Heap_Infobox heap_infobox { get; set; }
+        public DeletableProperties<int?> HeapInfobox { get; set; }
 
         [JsonProperty("bug_council_thumbnail")]
-        public Bug_Council_Thumbnail bug_council_thumbnail { get; set; }
+        public DeletableProperties<int?> bug_council_thumbnail { get; set; }
 
         [JsonProperty("post_section_header")]
         public Post_Section_Header post_section_header { get; set; }

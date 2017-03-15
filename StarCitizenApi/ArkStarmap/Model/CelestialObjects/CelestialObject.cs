@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.CelestialObjects.ShaderData;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {

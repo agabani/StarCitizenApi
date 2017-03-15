@@ -1,98 +1,99 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
     public class Child
     {
         [JsonProperty("id")]
-        public string id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("time_modified")]
-        public DateTime time_modified { get; set; }
+        public DateTime TimeModified { get; set; }
 
         [JsonProperty("type")]
-        public string type { get; set; }
+        public string Type { get; set; }
 
         [JsonProperty("designation")]
-        public string designation { get; set; }
+        public string Designation { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("code")]
-        public string code { get; set; }
+        public string Code { get; set; }
 
         [JsonProperty("age")]
-        public string age { get; set; }
+        public string Age { get; set; }
 
         [JsonProperty("distance")]
-        public string distance { get; set; }
+        public string Distance { get; set; }
 
         [JsonProperty("latitude")]
-        public string latitude { get; set; }
+        public string Latitude { get; set; }
 
         [JsonProperty("longitude")]
-        public string longitude { get; set; }
+        public string Longitude { get; set; }
 
         [JsonProperty("axial_tilt")]
-        public string axial_tilt { get; set; }
+        public string AxialTilt { get; set; }
 
         [JsonProperty("orbit_period")]
-        public string orbit_period { get; set; }
+        public string OrbitPeriod { get; set; }
 
         [JsonProperty("description")]
-        public string description { get; set; }
+        public string Description { get; set; }
 
         [JsonProperty("info_url")]
-        public object info_url { get; set; }
+        public object InfoUrl { get; set; }
 
         [JsonProperty("habitable")]
-        public object habitable { get; set; }
+        public object Habitable { get; set; }
 
         [JsonProperty("fairchanceact")]
-        public object fairchanceact { get; set; }
+        public object Fairchanceact { get; set; }
 
         [JsonProperty("show_orbitlines")]
-        public string show_orbitlines { get; set; }
+        public string ShowOrbitlines { get; set; }
 
         [JsonProperty("show_label")]
-        public string show_label { get; set; }
+        public string ShowLabel { get; set; }
 
         [JsonProperty("appearance")]
-        public string appearance { get; set; }
+        public string Appearance { get; set; }
 
         [JsonProperty("sensor_population")]
-        public string sensor_population { get; set; }
+        public string SensorPopulation { get; set; }
 
         [JsonProperty("sensor_economy")]
-        public string sensor_economy { get; set; }
+        public string SensorEconomy { get; set; }
 
         [JsonProperty("sensor_danger")]
-        public string sensor_danger { get; set; }
+        public string SensorDanger { get; set; }
 
         [JsonProperty("shader_data")]
-        public Shader_Data1 shader_data { get; set; }
+        public Shader_Data1 ShaderData { get; set; }
 
         [JsonProperty("size")]
-        public string size { get; set; }
+        public string Size { get; set; }
 
         [JsonProperty("subtype_id")]
-        public string subtype_id { get; set; }
+        public string SubtypeId { get; set; }
 
         [JsonProperty("parent_id")]
-        public string parent_id { get; set; }
+        public string ParentId { get; set; }
 
         [JsonProperty("subtype")]
-        public Subtype1 subtype { get; set; }
+        public Subtype Subtype { get; set; }
 
         [JsonProperty("affiliation")]
-        public object[] affiliation { get; set; }
+        public object[] Affiliation { get; set; }
 
         [JsonProperty("population")]
-        public object[] population { get; set; }
+        public object[] Population { get; set; }
 
         [JsonProperty("media")]
-        public Media[] media { get; set; }
+        public Media[] Media { get; set; }
     }
 }
