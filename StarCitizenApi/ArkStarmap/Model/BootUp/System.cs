@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.BootUp.Assets;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {

@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp
+namespace StarCitizenApi.ArkStarmap.Model.BootUp.Assets
 {
     public class Thumbnail
     {

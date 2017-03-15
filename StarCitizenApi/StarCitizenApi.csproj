@@ -51,6 +51,7 @@
     <Compile Include="ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Cache\FileCache.cs" />
+    <Compile Include="ArkStarmap\Model\Paged.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\SystemAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Affiliations.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
