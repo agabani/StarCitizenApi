@@ -21,7 +21,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
         public double Radius { get; set; }
 
         [JsonProperty("ring")]
-        public Ring Ring { get; set; }
+        public PhysicsRing Ring { get; set; }
 
         [JsonProperty("highlight")]
         public Highlight Highlight { get; set; }

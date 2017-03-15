@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
+namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
     public class Ring
     {
@@ -15,14 +15,5 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
 
         [JsonProperty("radius2")]
         public double Radius2 { get; set; }
-
-        [JsonProperty("speed")]
-        public double Speed { get; set; }
-
-        [JsonProperty("extraDensity")]
-        public double ExtraDensity { get; set; }
-
-        [JsonProperty("borderFading")]
-        public double BorderFading { get; set; }
     }
 }
