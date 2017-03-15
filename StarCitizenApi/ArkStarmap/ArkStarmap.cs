@@ -60,7 +60,7 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<Find> Find(string query)
+        public async Task<StarMapResult<FindData>> Find(string query)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/find")
             {
@@ -72,7 +72,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<Find>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarMapResult<FindData>>(await response.Content.ReadAsStringAsync());
             }
         }
 

@@ -132,7 +132,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Vault_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
-    <Compile Include="ArkStarmap\Model\Find\Data.cs" />
+    <Compile Include="ArkStarmap\Model\Find\FindData.cs" />
     <Compile Include="ArkStarmap\Model\Find\Objects.cs" />
     <Compile Include="ArkStarmap\Model\Find\Resultset.cs" />
     <Compile Include="ArkStarmap\Model\Find\Resultset1.cs" />

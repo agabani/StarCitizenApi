@@ -8,7 +8,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Find
         public int Success { get; set; }
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public FindData Data { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }
