@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
     public class Subtype
     {

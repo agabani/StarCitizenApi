@@ -82,7 +82,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\ChildShaderData.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Sizes.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Subtype.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Subtype.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Texture.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\System.cs" />
@@ -103,7 +103,6 @@
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\CelestialShaderData.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Starfield.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\Subtype.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Sun.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\Texture.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\Assests\Thumbnail.cs" />
