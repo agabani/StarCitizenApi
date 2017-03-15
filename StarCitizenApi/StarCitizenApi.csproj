@@ -58,7 +58,7 @@
     <Compile Include="ArkStarmap\Model\Shared\MemberedAffiliation.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Images.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\BootUpData.cs" />
+    <Compile Include="ArkStarmap\Model\BootUp\BootUp.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Entry.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Exit.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\LongRangeScanner.cs" />
@@ -107,9 +107,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ArkStarmap\Model\CelestialObjects\ShaderData\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

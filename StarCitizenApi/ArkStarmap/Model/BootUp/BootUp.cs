@@ -3,7 +3,7 @@ using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class BootUpData
+    public class BootUp
     {
         [JsonProperty("config")]
         public Config Config { get; set; }

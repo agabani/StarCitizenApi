@@ -20,9 +20,9 @@ namespace StarCitizenApi.ArkStarmap
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
         private static readonly FileCache FileCache = new FileCache();
 
-        public Task<Result<BootUpData>> BootUp()
+        public Task<Result<BootUp>> BootUp()
         {
-            return Post<BootUpData>("/api/starmap/bootup", null);
+            return Post<BootUp>("/api/starmap/bootup", null);
         }
 
         public Task<Result<StarSystems>> StarSystem(string code)
