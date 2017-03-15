@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Data
+    public class BootUpData
     {
         [JsonProperty("config")]
         public Config Config { get; set; }

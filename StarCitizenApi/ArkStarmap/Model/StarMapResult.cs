@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp
+namespace StarCitizenApi.ArkStarmap.Model
 {
-    public class BootUp
+    public class StarMapResult<TData>
     {
         [JsonProperty("success")]
         public int Success { get; set; }
 
         [JsonProperty("data")]
-        public BootUpData Data { get; set; }
+        public TData Data { get; set; }
 
         [JsonProperty("code")]
         public string Code { get; set; }

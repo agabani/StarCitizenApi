@@ -5,10 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using StarCitizenApi.ArkStarmap.Model;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
+using StarCitizenApi.ArkStarmap.Model.CelestialObjects;
 using StarCitizenApi.ArkStarmap.Model.Find;
 using StarCitizenApi.ArkStarmap.Model.Route;
 using StarCitizenApi.ArkStarmap.Model.StarSystem;
+using Data = StarCitizenApi.ArkStarmap.Model.CelestialObjects.Data;
 using Route = StarCitizenApi.ArkStarmap.Model.BootUp.Route;
 using StarSystem = StarCitizenApi.ArkStarmap.Model.StarSystem.StarSystem;
 
@@ -18,7 +21,7 @@ namespace StarCitizenApi.ArkStarmap
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
 
-        public async Task<BootUp> BootUp()
+        public async Task<StarMapResult<BootUpData>> BootUp()
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, "/api/starmap/bootup")))
             {
@@ -27,7 +30,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<BootUp>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(await response.Content.ReadAsStringAsync());
             }
         }
 
@@ -44,7 +47,7 @@ namespace StarCitizenApi.ArkStarmap
             }
         }
 
-        public async Task<CelestialObjects> CelestialObjects(string code)
+        public async Task<StarMapResult<Data>> CelestialObjects(string code)
         {
             using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
             {
@@ -53,7 +56,7 @@ namespace StarCitizenApi.ArkStarmap
                     throw new Exception();
                 }
 
-                return JsonConvert.DeserializeObject<CelestialObjects>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<StarMapResult<Data>>(await response.Content.ReadAsStringAsync());
             }
         }
 
