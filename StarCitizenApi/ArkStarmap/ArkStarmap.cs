@@ -56,7 +56,7 @@ namespace StarCitizenApi.ArkStarmap
                 return FromJson<T>(content);
             }
 
-            using (var response = await Client.Send(NewPostRequest<T>(endpoint, json)))
+            using (var response = await Client.Send(NewPostRequest(endpoint, json)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -71,7 +71,7 @@ namespace StarCitizenApi.ArkStarmap
             return FromJson<T>(content);
         }
 
-        private static HttpRequestMessage NewPostRequest<T>(string endpoint, string json)
+        private static HttpRequestMessage NewPostRequest(string endpoint, string json)
         {
             if (json == null)
             {
