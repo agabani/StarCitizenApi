@@ -71,7 +71,7 @@
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\Stars.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DerivedData.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\ShaderData\Highlight.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\Highlight.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\MediaImages.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Media.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObject.cs" />
@@ -91,7 +91,6 @@
     <Compile Include="ArkStarmap\Model\Result.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\Highlight.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\TextureImage.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
