@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace StarCitizenApi.Tests.ArkStarmap
@@ -12,16 +13,35 @@ namespace StarCitizenApi.Tests.ArkStarmap
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
             var result = await arkStarmap.BootUp();
-        }
 
-        [Test]
-        [TestCase("SOL")]
-        [TestCase("STANTON")]
-        public async Task StarSystem(string code)
-        {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+            Assert.That(result.Success, Is.EqualTo(1));
 
-            var result = await arkStarmap.StarSystem(code);
+            // Affiliations
+            Assert.That(result.Data.Affiliations.ResultSet, Is.Not.Empty);
+
+            // Config
+            Assert.That(result.Data.Config.Routes, Is.Not.Empty);
+            Assert.That(result.Data.Config.Starfield, Is.Not.Null);
+            Assert.That(result.Data.Config.LongRangeScanner, Is.Not.Null);
+
+            // Species
+            Assert.That(result.Data.Species, Is.Not.Null);
+            Assert.That(result.Data.Species.ResultSet, Is.Not.Empty);
+
+            // Systems
+            Assert.That(result.Data.Systems.ResultSet, Is.Not.Empty);
+            foreach (var resultSet in result.Data.Systems.ResultSet)
+            {
+                Assert.That(resultSet.Affiliation.All(affiliation => affiliation.MembershipId != null));
+            }
+
+            // Tunnels
+            Assert.That(result.Data.Tunnels.ResultSet, Is.Not.Empty);
+            foreach (var resultSet in result.Data.Tunnels.ResultSet)
+            {
+                Assert.That(resultSet.Entry, Is.Not.Null);
+                Assert.That(resultSet.Exit, Is.Not.Null);
+            }
         }
 
         [Test]
@@ -53,6 +73,16 @@ namespace StarCitizenApi.Tests.ArkStarmap
             var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
 
             var find = await arkStarmap.FindRoute(departure, destination, shipSize);
+        }
+
+        [Test]
+        [TestCase("SOL")]
+        [TestCase("STANTON")]
+        public async Task StarSystem(string code)
+        {
+            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+
+            var result = await arkStarmap.StarSystem(code);
         }
     }
 }
