@@ -21,5 +21,13 @@ namespace StarCitizenApi.Tests.ArkStarmap
 
             var result = await arkStarmap.StarSystem("SOL");
         }
+
+        [Test]
+        public async Task CelestialObjects()
+        {
+            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+
+            var celestialObjects = await arkStarmap.CelestialObjects("SOL.PLANETS.JUPITER");
+        }
     }
 }

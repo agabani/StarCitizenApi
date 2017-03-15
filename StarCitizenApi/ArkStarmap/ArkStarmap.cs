@@ -37,5 +37,18 @@ namespace StarCitizenApi.ArkStarmap
                 return JsonConvert.DeserializeObject<StarSystem>(await response.Content.ReadAsStringAsync());
             }
         }
+
+        public async Task<CelestialObjects> CelestialObjects(string code)
+        {
+            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception();
+                }
+
+                return JsonConvert.DeserializeObject<CelestialObjects>(await response.Content.ReadAsStringAsync());
+            }
+        }
     }
 }
