@@ -8,7 +8,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public int success { get; set; }
 
         [JsonProperty("data")]
-        public Data data { get; set; }
+        public CeletialObjectData data { get; set; }
 
         [JsonProperty("code")]
         public string code { get; set; }

@@ -20,50 +20,19 @@ namespace StarCitizenApi.ArkStarmap
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
         private static readonly FileCache FileCache = new FileCache();
 
-        public async Task<StarMapResult<BootUpData>> BootUp()
+        public Task<StarMapResult<BootUpData>> BootUp()
         {
-            const string endpoint = "/api/starmap/bootup";
-
-            var content = FileCache.Get(endpoint, null);
-
-            if (content != null)
-            {
-                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(content);
-            }
-
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, endpoint)))
-            {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception();
-                }
-
-                var value = await response.Content.ReadAsStringAsync();
-
-                FileCache.Put(endpoint, null, value);
-
-                return JsonConvert.DeserializeObject<StarMapResult<BootUpData>>(value);
-            }
+            return Post<BootUpData>("/api/starmap/bootup", null);
         }
 
         public Task<StarMapResult<StarSystemData>> StarSystem(string code)
         {
-            var endpoint = $"/api/starmap/star-systems/{code}";
-
-            return Post<StarSystemData>(endpoint, null);
+            return Post<StarSystemData>($"/api/starmap/star-systems/{code}", null);
         }
 
-        public async Task<CeletialObjects> CelestialObjects(string code)
+        public Task<StarMapResult<CeletialObjectData>> CelestialObjects(string code)
         {
-            using (var response = await Client.Send(new HttpRequestMessage(HttpMethod.Post, $"/api/starmap/star-systems/{code}")))
-            {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception();
-                }
-
-                return JsonConvert.DeserializeObject<CeletialObjects>(await response.Content.ReadAsStringAsync());
-            }
+            return Post<CeletialObjectData>($"/api/starmap/star-systems/{code}", null);
         }
 
         public Task<StarMapResult<FindData>> Find(string query)
@@ -87,7 +56,7 @@ namespace StarCitizenApi.ArkStarmap
                 return FromJson<T>(content);
             }
 
-            using (var response = await Client.Send(PostRequest<T>(endpoint, json)))
+            using (var response = await Client.Send(NewPostRequest<T>(endpoint, json)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -102,7 +71,7 @@ namespace StarCitizenApi.ArkStarmap
             return FromJson<T>(content);
         }
 
-        private static HttpRequestMessage PostRequest<T>(string endpoint, string json)
+        private static HttpRequestMessage NewPostRequest<T>(string endpoint, string json)
         {
             if (json == null)
             {
