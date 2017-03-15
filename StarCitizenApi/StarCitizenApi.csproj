@@ -81,8 +81,6 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Bug_Council_Thumbnail.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Channel_Item_Full.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Child.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Component_Description.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Cover.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Derived_Data.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Heap_Infobox.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Heap_Note.cs" />
@@ -99,7 +97,6 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Images1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Logo.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Media.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Post.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Post_Section_Header.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Press_Latest_Post.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Product_Thumb_In_Description.cs" />
@@ -131,7 +128,6 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Subtype1.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Texture1.cs" />
-    <Compile Include="ArkStarmap\Model\CelestialObjects\Vault_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Wallpaper_Thumb.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\System.cs" />

@@ -11,24 +11,24 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public string color2 { get; set; }
 
         [JsonProperty("alpha")]
-        public int alpha { get; set; }
+        public double alpha { get; set; }
 
         [JsonProperty("atmosphere1")]
-        public float atmosphere1 { get; set; }
+        public double atmosphere1 { get; set; }
 
         [JsonProperty("atmosphere2")]
-        public float atmosphere2 { get; set; }
+        public double atmosphere2 { get; set; }
 
         [JsonProperty("atmosphere3")]
-        public float atmosphere3 { get; set; }
+        public double atmosphere3 { get; set; }
 
         [JsonProperty("scaleMin")]
-        public float scaleMin { get; set; }
+        public double scaleMin { get; set; }
 
         [JsonProperty("scaleMax")]
-        public int scaleMax { get; set; }
+        public double scaleMax { get; set; }
 
         [JsonProperty("scalePeriod")]
-        public int scalePeriod { get; set; }
+        public double scalePeriod { get; set; }
     }
 }

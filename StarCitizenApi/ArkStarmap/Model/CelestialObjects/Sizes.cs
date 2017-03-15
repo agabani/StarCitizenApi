@@ -38,10 +38,10 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Slideshow_Wide slideshow_wide { get; set; }
 
         [JsonProperty("vault_thumb")]
-        public Properties vault_thumb { get; set; }
+        public Properties<int?> vault_thumb { get; set; }
 
         [JsonProperty("post")]
-        public Post post { get; set; }
+        public Properties<int?> post { get; set; }
 
         [JsonProperty("wallpaper_thumb")]
         public Wallpaper_Thumb wallpaper_thumb { get; set; }
@@ -53,7 +53,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Product_Thumb_Medium_And_Small product_thumb_medium_and_small { get; set; }
 
         [JsonProperty("component_description")]
-        public Component_Description component_description { get; set; }
+        public Properties<int?> component_description { get; set; }
 
         [JsonProperty("product_thumb_in_description")]
         public Product_Thumb_In_Description product_thumb_in_description { get; set; }
@@ -104,7 +104,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Banner banner { get; set; }
 
         [JsonProperty("cover")]
-        public Cover cover { get; set; }
+        public DeletableProperties<int?> cover { get; set; }
 
         [JsonProperty("logo")]
         public Logo logo { get; set; }
@@ -119,7 +119,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Texture1 texture { get; set; }
 
         [JsonProperty("hub_large")]
-        public Hub_Large hub_large { get; set; }
+        public Properties<string> hub_large { get; set; }
 
         [JsonProperty("hub_medium")]
         public Hub_Medium hub_medium { get; set; }

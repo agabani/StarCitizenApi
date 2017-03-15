@@ -4,13 +4,13 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
     public class Store_Slideshow_Small
     {
-        [JsonProperty("")]
+        [JsonProperty("width")]
         public int width { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("height")]
         public int height { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("mode")]
         public string mode { get; set; }
     }
 }
