@@ -1,4 +1,4 @@
-﻿namespace StarCitizenApi
+﻿namespace StarCitizenApi.ArkStarmap
 {
     public class ArkStarmapOptions
     {
