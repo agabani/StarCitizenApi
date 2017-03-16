@@ -18,5 +18,8 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
         
         [JsonProperty("ring")]
         public SystemRing Ring { get; set; }
+
+        [JsonProperty("sun")]
+        public Sun Sun { get; set; }
     }
 }

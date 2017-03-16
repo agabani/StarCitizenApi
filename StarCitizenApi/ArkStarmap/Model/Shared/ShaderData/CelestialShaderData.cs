@@ -10,6 +10,9 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
         [JsonProperty("sun")]
         public Sun Sun { get; set; }
 
+        [JsonProperty("blackhole")]
+        public SystemBlackhole Blackhole { get; set; }
+
         [JsonProperty("orbitalColor")]
         public string OrbitalColor { get; set; }
 
