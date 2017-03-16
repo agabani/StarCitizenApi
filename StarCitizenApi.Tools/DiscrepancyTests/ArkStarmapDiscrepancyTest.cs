@@ -8,18 +8,24 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
     [TestFixture]
     public class ArkStarmapDiscrepancyTest
     {
-        [Test]
-        public async Task Test()
+        private static void Test(JToken jObject, object @object)
         {
-            var jObject = await new JObjectArkStarmap().BootUp();
-            var fromObject = JObject.FromObject(await new StarCitizenApi.ArkStarmap.ArkStarmap().BootUp());
+            TestLeaf(jObject, JObject.FromObject(@object));
+        }
 
-            foreach (var child in jObject.Children())
+        private static void TestLeaf(JToken truth, JToken check)
+        {
+            foreach (var child in truth.Children())
             {
-                var jToken = fromObject[child.Path];
-
-                Assert.That(jToken, Is.Not.Null, $"Missing Path: {child.Path}");
+                Assert.That(check.SelectToken(child.Path), Is.Not.Null, $"Missing Path: {child.Path}");
+                TestLeaf(child, check);
             }
+        }
+
+        [Test]
+        public async Task BootUp()
+        {
+            Test(await new JObjectArkStarmap().BootUp(), await new StarCitizenApi.ArkStarmap.ArkStarmap().BootUp());
         }
     }
 }
