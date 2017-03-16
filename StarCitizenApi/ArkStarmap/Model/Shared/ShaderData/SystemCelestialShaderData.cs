@@ -20,6 +20,9 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
         [JsonProperty("ring")]
         public SystemRing Ring { get; set; }
 
+        [JsonProperty("blackhole")]
+        public SystemBlackhole Blackhole { get; set; }
+
         [JsonProperty("fullturn")]
         public double Fullturn { get; set; }
     }

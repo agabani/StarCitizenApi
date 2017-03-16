@@ -72,6 +72,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public double AggregatedDanger { get; set; }
 
         [JsonProperty("thumbnail")]
-        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
+        public object Thumbnail { get; set; }
     }
 }

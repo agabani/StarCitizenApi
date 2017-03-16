@@ -80,6 +80,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\Sizes.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\ShaderData.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemBlackhole.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Subtype.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\System.cs" />

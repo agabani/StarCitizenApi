@@ -29,11 +29,15 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         }
 
         [Test]
-        [TestCase("SOL")]
-        [TestCase("STANTON")]
-        public async Task StarSystem(string code)
+        public async Task StarSystem()
         {
-            Test(await new JObjectArkStarmap().StarSystem(code), await new StarCitizenApi.ArkStarmap.ArkStarmap().StarSystem(code));
+            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+            var result = await arkStarmap.BootUp();
+
+            foreach (var starSystem in result.Data.Systems.ResultSet)
+            {
+                Test(await new JObjectArkStarmap().StarSystem(starSystem.Code), await arkStarmap.StarSystem(starSystem.Code));
+            }
         }
     }
 }
