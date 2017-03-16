@@ -4,20 +4,30 @@ using System.Text;
 
 namespace StarCitizenApi.ArkStarmap.Cache
 {
-    public class FileCache
+    internal class FileCache
     {
-        public string Get(string endpoint, string body)
-        {
-            var fileName = $"C:\\Cache\\{FileName(endpoint, body)}";
+        private readonly string _workingDirectory;
 
-            return File.Exists(fileName) ? File.ReadAllText(fileName, Encoding.UTF8) : null;
+        internal FileCache(string workingDirectory)
+        {
+            _workingDirectory = workingDirectory;
         }
 
-        public void Put(string endpoint, string body, string content)
+        internal string Get(string endpoint, string body)
         {
-            var fileName = $"C:\\Cache\\{FileName(endpoint, body)}";
+            var filePath = FilePath(endpoint, body);
 
-            File.WriteAllText(fileName, content, Encoding.UTF8);
+            return File.Exists(filePath) ? File.ReadAllText(filePath, Encoding.UTF8) : null;
+        }
+
+        internal void Put(string endpoint, string body, string content)
+        {
+            File.WriteAllText(FilePath(endpoint, body), content, Encoding.UTF8);
+        }
+
+        private string FilePath(string endpoint, string body)
+        {
+            return $"{_workingDirectory}\\{FileName(endpoint, body)}";
         }
 
         private static string FileName(string endpoint, string body = "")

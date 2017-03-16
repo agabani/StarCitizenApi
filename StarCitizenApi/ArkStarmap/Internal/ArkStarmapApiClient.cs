@@ -14,7 +14,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
     public class ArkStarmapApiClient
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
-        private static readonly FileCache FileCache = new FileCache();
+        private static readonly FileCache FileCache = new FileCache("C:\\Cache");
 
         public Task<JObject> BootUp()
         {
