@@ -3,7 +3,7 @@ using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Entry : Entity
+    public class TunnelEntrance : Entity
     {
         [JsonProperty("status")]
         public string Status { get; set; }

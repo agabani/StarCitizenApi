@@ -23,9 +23,9 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public string ExitId { get; set; }
 
         [JsonProperty("entry")]
-        public Entry Entry { get; set; }
+        public TunnelEntrance Entry { get; set; }
 
         [JsonProperty("exit")]
-        public Exit Exit { get; set; }
+        public TunnelEntrance Exit { get; set; }
     }
 }
