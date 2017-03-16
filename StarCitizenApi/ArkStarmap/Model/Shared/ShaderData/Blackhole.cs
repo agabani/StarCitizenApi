@@ -2,7 +2,7 @@
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
-    public class SystemBlackhole
+    public class Blackhole
     {
         [JsonProperty("color1")]
         public string Color1 { get; set; }

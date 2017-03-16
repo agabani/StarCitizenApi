@@ -11,7 +11,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
         public Sun Sun { get; set; }
 
         [JsonProperty("blackhole")]
-        public SystemBlackhole Blackhole { get; set; }
+        public Blackhole Blackhole { get; set; }
 
         [JsonProperty("orbitalMin")]
         public double OrbitalMin { get; set; }
