@@ -5,7 +5,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Find
     public class Find
     {
         [JsonProperty("systems")]
-        public Paged<System> Systems { get; set; }
+        public Paged<Entity> Systems { get; set; }
 
         [JsonProperty("objects")]
         public Paged<Object> Objects { get; set; }

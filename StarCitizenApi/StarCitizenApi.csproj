@@ -82,9 +82,8 @@
     <Compile Include="ArkStarmap\Model\Shared\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Shared\SubType.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
-    <Compile Include="ArkStarmap\Model\Find\System.cs" />
+    <Compile Include="ArkStarmap\Model\Find\Entity.cs" />
     <Compile Include="ArkStarmap\Model\Find\Object.cs" />
-    <Compile Include="ArkStarmap\Model\Find\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\FindRoute.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />

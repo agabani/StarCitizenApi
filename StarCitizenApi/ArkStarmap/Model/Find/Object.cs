@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.Find
 {
-    public class Object : System
+    public class Object : Entity
     {
         [JsonProperty("status")]
         public string Status { get; set; }
@@ -14,6 +14,6 @@ namespace StarCitizenApi.ArkStarmap.Model.Find
         public string Designation { get; set; }
 
         [JsonProperty("star_system")]
-        public StarSystem StarSystem { get; set; }
+        public Entity StarSystem { get; set; }
     }
 }
