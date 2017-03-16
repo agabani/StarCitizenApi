@@ -5,25 +5,13 @@ using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 {
-    public class CelestialObject
+    public class CelestialObject : Entity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("time_modified")]
         public DateTime TimeModified { get; set; }
 
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
         [JsonProperty("designation")]
         public string Designation { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
         [JsonProperty("age")]
         public string Age { get; set; }

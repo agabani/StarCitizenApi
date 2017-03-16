@@ -62,7 +62,6 @@
     <Compile Include="ArkStarmap\Model\BootUp\Entry.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Exit.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\LongRangeScanner.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Tunnel.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Specie.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Affiliation.cs" />

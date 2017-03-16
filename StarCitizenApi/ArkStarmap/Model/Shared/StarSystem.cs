@@ -4,25 +4,13 @@ using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
-    public class StarSystem
+    public class StarSystem : Entity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("status")]
         public string Status { get; set; }
 
         [JsonProperty("time_modified")]
         public DateTime TimeModified { get; set; }
-
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
         [JsonProperty("position_x")]
         public string PositionX { get; set; }

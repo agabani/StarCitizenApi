@@ -1,29 +1,18 @@
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Entry
+    public class Entry : Entity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("code")]
-        public string Code { get; set; }
-
         [JsonProperty("status")]
         public string Status { get; set; }
 
         [JsonProperty("star_system_id")]
         public string StarSystemId { get; set; }
 
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
         [JsonProperty("designation")]
         public string Designation { get; set; }
-
-        [JsonProperty("name")]
-        public object Name { get; set; }
 
         [JsonProperty("latitude")]
         public string Latitude { get; set; }
