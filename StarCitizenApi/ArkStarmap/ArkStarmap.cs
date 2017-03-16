@@ -11,31 +11,40 @@ namespace StarCitizenApi.ArkStarmap
 {
     public class ArkStarmap
     {
-        private static readonly ArkStarmapApiClient Client = new ArkStarmapApiClient();
+        private readonly ArkStarmapApiClient _client;
+
+        public ArkStarmap() : this(ArkStarmapOptions.Default)
+        {
+        }
+
+        public ArkStarmap(ArkStarmapOptions options)
+        {
+            _client = new ArkStarmapApiClient(options);
+        }
 
         public async Task<Result<BootUp>> BootUp()
         {
-            return (await Client.BootUp()).ToObject<Result<BootUp>>();
+            return (await _client.BootUp()).ToObject<Result<BootUp>>();
         }
 
         public async Task<Result<StarSystems>> StarSystem(string code)
         {
-            return (await Client.StarSystem(code)).ToObject<Result<StarSystems>>();
+            return (await _client.StarSystem(code)).ToObject<Result<StarSystems>>();
         }
 
         public async Task<Result<CelestialObjects>> CelestialObjects(string code)
         {
-            return (await Client.CelestialObjects(code)).ToObject<Result<CelestialObjects>>();
+            return (await _client.CelestialObjects(code)).ToObject<Result<CelestialObjects>>();
         }
 
         public async Task<Result<Find>> Find(string query)
         {
-            return (await Client.Find(query)).ToObject<Result<Find>>();
+            return (await _client.Find(query)).ToObject<Result<Find>>();
         }
 
         public async Task<Result<FindRoute>> FindRoute(string departure, string destination, string shipSize)
         {
-            return (await Client.FindRoute(departure, destination, shipSize)).ToObject<Result<FindRoute>>();
+            return (await _client.FindRoute(departure, destination, shipSize)).ToObject<Result<FindRoute>>();
         }
     }
 }

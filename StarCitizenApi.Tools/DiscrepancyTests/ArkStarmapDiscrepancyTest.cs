@@ -9,7 +9,7 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
     [TestFixture]
     public class ArkStarmapDiscrepancyTest
     {
-        private readonly ArkStarmapApiClient _arkStarmapApiClient = new ArkStarmapApiClient();
+        private readonly ArkStarmapApiClient _arkStarmapApiClient = new ArkStarmapApiClient(ArkStarmapOptions.Default);
         private readonly ArkStarmap.ArkStarmap _arkStarmap = new ArkStarmap.ArkStarmap();
 
         private static void Test(JToken jObject, object @object)

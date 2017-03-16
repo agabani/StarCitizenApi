@@ -6,11 +6,16 @@ namespace StarCitizenApi.ArkStarmap.Cache
 {
     internal class FileCache
     {
-        private readonly string _workingDirectory;
+        private readonly string _cacheDirectory;
 
         internal FileCache(string workingDirectory)
         {
-            _workingDirectory = workingDirectory;
+            _cacheDirectory = $"Cache\\{workingDirectory}";
+
+            if (!Directory.Exists(_cacheDirectory))
+            {
+                Directory.CreateDirectory(_cacheDirectory);
+            }
         }
 
         internal string Get(string endpoint, string body)
@@ -27,7 +32,7 @@ namespace StarCitizenApi.ArkStarmap.Cache
 
         private string FilePath(string endpoint, string body)
         {
-            return $"{_workingDirectory}\\{FileName(endpoint, body)}";
+            return $"{_cacheDirectory}\\{FileName(endpoint, body)}";
         }
 
         private static string FileName(string endpoint, string body = "")

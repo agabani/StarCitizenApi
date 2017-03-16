@@ -14,7 +14,12 @@ namespace StarCitizenApi.ArkStarmap.Internal
     public class ArkStarmapApiClient
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
-        private static readonly FileCache FileCache = new FileCache("C:\\Cache");
+        private readonly FileCache _fileCache;
+
+        public ArkStarmapApiClient(ArkStarmapOptions options)
+        {
+            _fileCache = new FileCache(options.CacheLocation);
+        }
 
         public Task<JObject> BootUp()
         {
@@ -45,7 +50,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
         {
             var json = ToJson(body);
 
-            var content = FileCache.Get(endpoint, json);
+            var content = _fileCache.Get(endpoint, json);
 
             if (content != null)
             {
@@ -62,7 +67,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
                 content = await response.Content.ReadAsStringAsync();
             }
 
-            FileCache.Put(endpoint, json, content);
+            _fileCache.Put(endpoint, json, content);
 
             return FromJson(content);
         }
