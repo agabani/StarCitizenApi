@@ -10,9 +10,9 @@
 
 ## Modules
 
-| Module Name                               | Reference                                  | Status  |
-|-------------------------------------------|--------------------------------------------|---------|
-| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://robertsspaceindustries.com/starmap | Scoping |
+| Module Name                               | Reference                                  | Status                        |
+|-------------------------------------------|--------------------------------------------|-------------------------------|
+| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://robertsspaceindustries.com/starmap | Discrepancy Tool Development  |
 
 ## ARK Starmap
 
