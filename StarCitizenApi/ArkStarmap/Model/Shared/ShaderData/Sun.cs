@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData
+namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 {
     public class Sun
     {

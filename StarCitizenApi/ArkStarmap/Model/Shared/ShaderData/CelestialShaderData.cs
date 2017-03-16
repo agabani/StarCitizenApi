@@ -5,12 +5,21 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
     public class CelestialShaderData : ShaderData
     {
         [JsonProperty("ring")]
-        public Ring Ring { get; set; }
+        public SystemRing Ring { get; set; }
 
-         [JsonProperty("orbitalColor")]
+        [JsonProperty("sun")]
+        public Sun Sun { get; set; }
+
+        [JsonProperty("orbitalColor")]
         public string OrbitalColor { get; set; }
 
         [JsonProperty("orbitalHighlightColor")]
         public string OrbitalHighlightColor { get; set; }
+
+        [JsonProperty("radius")]
+        public double Radius { get; set; }
+
+        [JsonProperty("fullturn")]
+        public double FullTurn { get; set; }
     }
 }

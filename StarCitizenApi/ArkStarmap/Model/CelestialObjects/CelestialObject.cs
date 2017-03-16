@@ -98,7 +98,13 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         [JsonProperty("children")]
         public Child[] Children { get; set; }
 
+        [JsonProperty("model")]
+        public object Models { get; set; }
+
         [JsonProperty("texture")]
         public Texture Texture { get; set; }
+
+        [JsonProperty("thumbnail")]
+        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
     }
 }
