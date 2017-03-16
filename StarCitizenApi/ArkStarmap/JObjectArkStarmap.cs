@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Cache;
 
-namespace StarCitizenApi.Tools.ArkStarmap
+namespace StarCitizenApi.ArkStarmap
 {
     public class JObjectArkStarmap
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using StarCitizenApi.Tools.ArkStarmap;
+using StarCitizenApi.ArkStarmap;
 
 namespace StarCitizenApi.Tools.DiscrepancyTests
 {

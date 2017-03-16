@@ -54,7 +54,6 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArkStarmap\JObjectArkStarmap.cs" />
     <Compile Include="DiscrepancyTests\ArkStarmapDiscrepancyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

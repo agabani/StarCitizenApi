@@ -51,6 +51,7 @@
     <Compile Include="ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Cache\FileCache.cs" />
+    <Compile Include="ArkStarmap\JObjectArkStarmap.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\TunnelEntrance.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DeletableProperties.cs" />
