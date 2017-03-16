@@ -87,7 +87,7 @@
     <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />
     <Compile Include="ArkStarmap\Model\Result.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\CelestialObject.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\DetailedCelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\TextureImage.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />

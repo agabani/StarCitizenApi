@@ -18,6 +18,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public StarSystemShaderData ShaderData { get; set; }
 
         [JsonProperty("celestial_objects")]
-        public CelestialObject[] CelestialObjects { get; set; }
+        public DetailedCelestialObject[] CelestialObjects { get; set; }
     }
 }
