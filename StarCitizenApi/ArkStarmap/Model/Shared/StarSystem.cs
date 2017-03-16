@@ -1,29 +1,16 @@
-using System;
+﻿using System;
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
-namespace StarCitizenApi.ArkStarmap.Model.BootUp
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
-    public class StarSystem
+    public class StarSystem : Entity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("status")]
         public string Status { get; set; }
 
         [JsonProperty("time_modified")]
         public DateTime TimeModified { get; set; }
-
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
         [JsonProperty("position_x")]
         public string PositionX { get; set; }
@@ -34,11 +21,11 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         [JsonProperty("position_z")]
         public string PositionZ { get; set; }
 
-        [JsonProperty("description")]
-        public string Description { get; set; }
-
         [JsonProperty("info_url")]
         public object InfoUrl { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
 
         [JsonProperty("affiliation")]
         public MemberedAffiliation[] Affiliation { get; set; }

@@ -1,30 +1,15 @@
 using System;
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared;
-using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
-using StarCitizenApi.ArkStarmap.Model.Shared.ShaderData;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
-    public class CelestialObject
+    public class CelestialObject : Entity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("time_modified")]
         public DateTime TimeModified { get; set; }
 
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
         [JsonProperty("designation")]
         public string Designation { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("code")]
-        public string Code { get; set; }
 
         [JsonProperty("age")]
         public string Age { get; set; }
@@ -51,10 +36,10 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public object InfoUrl { get; set; }
 
         [JsonProperty("habitable")]
-        public string Habitable { get; set; }
+        public object Habitable { get; set; }
 
         [JsonProperty("fairchanceact")]
-        public string FairChanceAct { get; set; }
+        public object Fairchanceact { get; set; }
 
         [JsonProperty("show_orbitlines")]
         public string ShowOrbitlines { get; set; }
@@ -75,7 +60,7 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public string SensorDanger { get; set; }
 
         [JsonProperty("shader_data")]
-        public SystemCelestialShaderData ShaderData { get; set; }
+        public ShaderData.ShaderData ShaderData { get; set; }
 
         [JsonProperty("size")]
         public string Size { get; set; }
@@ -94,11 +79,5 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
 
         [JsonProperty("population")]
         public object[] Population { get; set; }
-
-        [JsonProperty("texture")]
-        public Texture Texture { get; set; }
-
-        [JsonProperty("thumbnail")]
-        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
     }
 }

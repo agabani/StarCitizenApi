@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.Find
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
-    public class System
+    public class Entity
     {
         [JsonProperty("id")]
         public string Id { get; set; }

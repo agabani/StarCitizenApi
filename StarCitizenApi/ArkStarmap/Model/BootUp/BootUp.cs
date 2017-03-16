@@ -9,7 +9,7 @@ namespace StarCitizenApi.ArkStarmap.Model.BootUp
         public Config Config { get; set; }
 
         [JsonProperty("systems")]
-        public Paged<StarSystem> Systems { get; set; }
+        public Paged<Shared.StarSystem> Systems { get; set; }
 
         [JsonProperty("tunnels")]
         public Paged<Tunnel> Tunnels { get; set; }
