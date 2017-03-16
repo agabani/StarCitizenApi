@@ -5,7 +5,7 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
     public class ShaderData
     {
         [JsonProperty("ring")]
-        public SystemRing Ring { get; set; }
+        public Ring Ring { get; set; }
 
         [JsonProperty("sun")]
         public Sun Sun { get; set; }
@@ -30,7 +30,6 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.ShaderData
 
         [JsonProperty("orbitalHighlightColor")]
         public string OrbitalHighlightColor { get; set; }
-
 
         [JsonProperty("radius")]
         public double Radius { get; set; }

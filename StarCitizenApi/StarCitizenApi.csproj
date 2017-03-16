@@ -94,7 +94,6 @@
     <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
-    <Compile Include="ArkStarmap\Model\Shared\ShaderData\SystemRing.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Sun.cs" />
