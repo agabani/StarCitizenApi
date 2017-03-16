@@ -79,6 +79,7 @@
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\SourceStream.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\ShaderData.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Blackhole.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\StarSystem.cs" />
     <Compile Include="ArkStarmap\Model\Shared\SubType.cs" />
     <Compile Include="ArkStarmap\Model\Find\Find.cs" />
     <Compile Include="ArkStarmap\Model\Find\System.cs" />
@@ -93,7 +94,7 @@
     <Compile Include="ArkStarmap\Model\Shared\Assests\TextureImage.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\StarSystem.cs" />
+    <Compile Include="ArkStarmap\Model\StarSystem\DetailedStarSystem.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Starfield.cs" />
     <Compile Include="ArkStarmap\Model\Shared\ShaderData\Sun.cs" />

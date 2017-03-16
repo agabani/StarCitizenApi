@@ -1,10 +1,8 @@
-using System;
+﻿using System;
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
-using StarCitizenApi.ArkStarmap.Model.StarSystem.ShaderData;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
     public class StarSystem
     {
@@ -38,26 +36,11 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         [JsonProperty("info_url")]
         public object InfoUrl { get; set; }
 
-        [JsonProperty("habitable_zone_inner")]
-        public string HabitableZoneInner { get; set; }
-
-        [JsonProperty("habitable_zone_outer")]
-        public string HabitableZoneOuter { get; set; }
-
-        [JsonProperty("frost_line")]
-        public string FrostLine { get; set; }
-
         [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonProperty("shader_data")]
-        public StarSystemShaderData ShaderData { get; set; }
-
         [JsonProperty("affiliation")]
         public MemberedAffiliation[] Affiliation { get; set; }
-
-        [JsonProperty("celestial_objects")]
-        public CelestialObject[] CelestialObjects { get; set; }
 
         [JsonProperty("aggregated_size")]
         public string AggregatedSize { get; set; }
@@ -72,6 +55,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public double AggregatedDanger { get; set; }
 
         [JsonProperty("thumbnail")]
-        public object Thumbnail { get; set; }
+        public Thumbnail<object> Thumbnail { get; set; }
     }
 }
