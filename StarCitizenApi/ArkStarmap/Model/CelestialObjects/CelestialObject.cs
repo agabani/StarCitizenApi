@@ -75,7 +75,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public string SensorDanger { get; set; }
 
         [JsonProperty("shader_data")]
-        public CelestialShaderData ShaderData { get; set; }
+        public ShaderData ShaderData { get; set; }
 
         [JsonProperty("size")]
         public string Size { get; set; }
