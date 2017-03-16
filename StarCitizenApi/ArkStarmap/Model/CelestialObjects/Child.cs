@@ -78,7 +78,7 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public SubType SubType { get; set; }
 
         [JsonProperty("affiliation")]
-        public object[] Affiliation { get; set; }
+        public MemberedAffiliation[] Affiliation { get; set; }
 
         [JsonProperty("population")]
         public object[] Population { get; set; }
