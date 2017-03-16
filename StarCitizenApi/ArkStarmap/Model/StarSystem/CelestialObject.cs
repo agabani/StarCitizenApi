@@ -95,6 +95,9 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         [JsonProperty("population")]
         public object[] Population { get; set; }
 
+        [JsonProperty("model")]
+        public object Models { get; set; }
+
         [JsonProperty("texture")]
         public Texture Texture { get; set; }
 
