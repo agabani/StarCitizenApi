@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
