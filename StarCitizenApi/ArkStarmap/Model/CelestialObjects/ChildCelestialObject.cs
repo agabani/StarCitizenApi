@@ -3,7 +3,7 @@ using StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets;
 
 namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
 {
-    public class Child : CObject
+    public class ChildCelestialObject : CelestialObject
     {
         [JsonProperty("media")]
         public Media[] Media { get; set; }
