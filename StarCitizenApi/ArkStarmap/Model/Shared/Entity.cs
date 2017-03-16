@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace StarCitizenApi.ArkStarmap.Model.Find
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
     public class Entity
     {
