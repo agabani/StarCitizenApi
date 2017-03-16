@@ -2,13 +2,13 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace StarCitizenApi
+namespace StarCitizenApi.Internal
 {
-    public class ApiClient : IDisposable
+    internal class ApiClient : IDisposable
     {
         private HttpClient _client;
 
-        public ApiClient(Uri baseAddress)
+        internal ApiClient(Uri baseAddress)
         {
             _client = new HttpClient
             {
@@ -23,7 +23,7 @@ namespace StarCitizenApi
             GC.SuppressFinalize(this);
         }
 
-        public Task<HttpResponseMessage> Send(HttpRequestMessage request)
+        internal Task<HttpResponseMessage> Send(HttpRequestMessage request)
         {
             return _client.SendAsync(request);
         }

@@ -2,15 +2,15 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using StarCitizenApi.ArkStarmap;
+using StarCitizenApi.ArkStarmap.Internal;
 
 namespace StarCitizenApi.Tools.DiscrepancyTests
 {
     [TestFixture]
     public class ArkStarmapDiscrepancyTest
     {
-        private readonly JObjectArkStarmap _jObjectArkStarmap = new JObjectArkStarmap();
-        private readonly StarCitizenApi.ArkStarmap.ArkStarmap _arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
+        private readonly ArkStarmapApiClient _arkStarmapApiClient = new ArkStarmapApiClient();
+        private readonly ArkStarmap.ArkStarmap _arkStarmap = new ArkStarmap.ArkStarmap();
 
         private static void Test(JToken jObject, object @object)
         {
@@ -29,7 +29,7 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         [Test]
         public async Task BootUp()
         {
-            Test(await _jObjectArkStarmap.BootUp(), await _arkStarmap.BootUp());
+            Test(await _arkStarmapApiClient.BootUp(), await _arkStarmap.BootUp());
         }
 
         [Test]
@@ -42,7 +42,7 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
                     foreach (var celestialObject in system.CelestialObjects)
                     {
                         Console.WriteLine(celestialObject.Code);
-                        Test(await _jObjectArkStarmap.CelestialObjects(celestialObject.Code), await _arkStarmap.CelestialObjects(celestialObject.Code));
+                        Test(await _arkStarmapApiClient.CelestialObjects(celestialObject.Code), await _arkStarmap.CelestialObjects(celestialObject.Code));
                     }
                 }
             }
@@ -52,7 +52,7 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         [TestCase("SOL")]
         public async Task Find(string query)
         {
-            Test(await _jObjectArkStarmap.Find(query), await _arkStarmap.Find(query));
+            Test(await _arkStarmapApiClient.Find(query), await _arkStarmap.Find(query));
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         {
             foreach (var starSystem in (await _arkStarmap.BootUp()).Data.Systems.ResultSet)
             {
-                Test(await _jObjectArkStarmap.StarSystem(starSystem.Code), await _arkStarmap.StarSystem(starSystem.Code));
+                Test(await _arkStarmapApiClient.StarSystem(starSystem.Code), await _arkStarmap.StarSystem(starSystem.Code));
             }
         }
     }

@@ -7,10 +7,11 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Cache;
+using StarCitizenApi.Internal;
 
-namespace StarCitizenApi.ArkStarmap
+namespace StarCitizenApi.ArkStarmap.Internal
 {
-    public class JObjectArkStarmap
+    public class ArkStarmapApiClient
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
         private static readonly FileCache FileCache = new FileCache();
