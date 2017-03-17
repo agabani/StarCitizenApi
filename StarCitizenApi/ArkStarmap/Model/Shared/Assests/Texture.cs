@@ -12,6 +12,6 @@ namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
         public Uri Source { get; set; }
 
         [JsonProperty("images")]
-        public TextureImage Images { get; set; }
+        public Images Images { get; set; }
     }
 }

@@ -1,15 +1,10 @@
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Tunnel
+    public class Tunnel : Identity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("name")]
-        public object Name { get; set; }
-
         [JsonProperty("size")]
         public string Size { get; set; }
 

@@ -1,8 +1,7 @@
 using Newtonsoft.Json;
-using StarCitizenApi.ArkStarmap.Model.Shared;
 using StarCitizenApi.ArkStarmap.Model.Shared.Assests;
 
-namespace StarCitizenApi.ArkStarmap.Model.StarSystem
+namespace StarCitizenApi.ArkStarmap.Model.Shared
 {
     public class DetailedCelestialObject : CelestialObject
     {
@@ -13,6 +12,6 @@ namespace StarCitizenApi.ArkStarmap.Model.StarSystem
         public Texture Texture { get; set; }
 
         [JsonProperty("thumbnail")]
-        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
+        public Thumbnail<Images> Thumbnail { get; set; }
     }
 }

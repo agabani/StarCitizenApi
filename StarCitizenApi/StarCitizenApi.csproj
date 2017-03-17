@@ -48,9 +48,12 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiClient.cs" />
+    <Compile Include="ArkStarmap\ArkStarmapOptions.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Identity.cs" />
+    <Compile Include="Internal\ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
     <Compile Include="ArkStarmap\Cache\FileCache.cs" />
+    <Compile Include="ArkStarmap\Internal\ArkStarmapApiClient.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\TunnelEntrance.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\Assets\DeletableProperties.cs" />
@@ -58,7 +61,7 @@
     <Compile Include="ArkStarmap\Model\Shared\CelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\Paged.cs" />
     <Compile Include="ArkStarmap\Model\Shared\MemberedAffiliation.cs" />
-    <Compile Include="ArkStarmap\Model\BootUp\Assets\Images.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\Assests\Images.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\Config.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\BootUp.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\ShaderData\LongRangeScanner.cs" />
@@ -87,10 +90,8 @@
     <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />
     <Compile Include="ArkStarmap\Model\Result.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\DetailedCelestialObject.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\DetailedCelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
-    <Compile Include="ArkStarmap\Model\Shared\Assests\TextureImage.cs" />
-    <Compile Include="ArkStarmap\Model\Shared\Assests\ThumbnailImage.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\DetailedStarSystem.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\StarSystemShaderData.cs" />

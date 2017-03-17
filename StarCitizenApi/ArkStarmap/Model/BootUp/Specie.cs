@@ -1,15 +1,10 @@
 using Newtonsoft.Json;
+using StarCitizenApi.ArkStarmap.Model.Shared;
 
 namespace StarCitizenApi.ArkStarmap.Model.BootUp
 {
-    public class Specie
+    public class Specie : Identity
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
         [JsonProperty("code")]
         public string Code { get; set; }
     }

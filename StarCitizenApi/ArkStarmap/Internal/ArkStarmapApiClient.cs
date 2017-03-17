@@ -7,13 +7,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using StarCitizenApi.ArkStarmap.Cache;
+using StarCitizenApi.Internal;
 
-namespace StarCitizenApi.Tools.ArkStarmap
+namespace StarCitizenApi.ArkStarmap.Internal
 {
-    public class JObjectArkStarmap
+    public class ArkStarmapApiClient
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
-        private static readonly FileCache FileCache = new FileCache();
+        private readonly FileCache _fileCache;
+
+        public ArkStarmapApiClient(ArkStarmapOptions options)
+        {
+            _fileCache = new FileCache(options.CacheLocation);
+        }
 
         public Task<JObject> BootUp()
         {
@@ -44,7 +50,7 @@ namespace StarCitizenApi.Tools.ArkStarmap
         {
             var json = ToJson(body);
 
-            var content = FileCache.Get(endpoint, json);
+            var content = _fileCache.Get(endpoint, json);
 
             if (content != null)
             {
@@ -61,7 +67,7 @@ namespace StarCitizenApi.Tools.ArkStarmap
                 content = await response.Content.ReadAsStringAsync();
             }
 
-            FileCache.Put(endpoint, json, content);
+            _fileCache.Put(endpoint, json, content);
 
             return FromJson(content);
         }

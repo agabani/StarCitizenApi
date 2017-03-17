@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace StarCitizenApi.ArkStarmap.Model.Shared.Assests
 {
-    public class TextureImage
+    public class Images
     {
         [JsonProperty("post")]
         public Uri Post { get; set; }
