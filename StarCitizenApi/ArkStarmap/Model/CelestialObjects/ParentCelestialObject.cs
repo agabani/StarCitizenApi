@@ -16,6 +16,6 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects
         public Texture Texture { get; set; }
 
         [JsonProperty("thumbnail")]
-        public Thumbnail<ThumbnailImage> Thumbnail { get; set; }
+        public Thumbnail<Images> Thumbnail { get; set; }
     }
 }
