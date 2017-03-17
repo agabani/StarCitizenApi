@@ -90,7 +90,7 @@
     <Compile Include="ArkStarmap\Model\FindRoute\Route.cs" />
     <Compile Include="ArkStarmap\Model\FindRoute\Segment.cs" />
     <Compile Include="ArkStarmap\Model\Result.cs" />
-    <Compile Include="ArkStarmap\Model\StarSystem\DetailedCelestialObject.cs" />
+    <Compile Include="ArkStarmap\Model\Shared\DetailedCelestialObject.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\StarSystems.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\ShaderData\PlanetsSize.cs" />
     <Compile Include="ArkStarmap\Model\StarSystem\DetailedStarSystem.cs" />
