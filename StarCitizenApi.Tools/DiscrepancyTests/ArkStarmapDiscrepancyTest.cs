@@ -8,6 +8,7 @@ using StarCitizenApi.ArkStarmap.Internal;
 namespace StarCitizenApi.Tools.DiscrepancyTests
 {
     [TestFixture]
+    [Explicit]
     public class ArkStarmapDiscrepancyTest
     {
         private readonly ArkStarmapApiClient _arkStarmapApiClient = new ArkStarmapApiClient(ArkStarmapOptions.Default);
