@@ -12,9 +12,17 @@
 
 ## Modules
 
-| Module Name                               | Nuget Package URL                                        | Status                        |
-|-------------------------------------------|----------------------------------------------------------|-------------------------------|
-| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://www.myget.org/feed/agabani/package/nuget/StarCitizenApi | Refinement through demo usage |
+| Module Name               | Status                        |
+|---------------------------|-------------------------------|
+| StarCitizenApi.ArkStarmap | Refinement through demo usage |
+
+## Nuget Packages
+
+| Nuget Package Name          | Nuget Package URL                                                            |
+|-----------------------------|------------------------------------------------------------------------------|
+| StarCitizenApi              | https://www.myget.org/feed/agabani/package/nuget/StarCitizenApi              |
+| StarCitizenApi.FileSystem   | https://www.myget.org/feed/agabani/package/nuget/StarCitizenApi.FileSystem   |
+| StarCitizenApi.WindowsAzure | https://www.myget.org/feed/agabani/package/nuget/StarCitizenApi.WindowsAzure |
 
 ## ARK Starmap
 
@@ -22,11 +30,10 @@
 - **Motivation:** Intergration with Star Citizen business process systems
 - **Reference:** https://robertsspaceindustries.com/starmap
 
-### Definition of Done
-
-| Feature                      | Status                                                             |
-|------------------------------|--------------------------------------------------------------------|
-| SDK                          | First iteration complete                                           |
-| Local Caching                | First iteration complete (mandatory non expiring local file cache) |
-| Discrepancies Detection Tool | First iteration complete                                           |
-| Wiki for getting started     | Pending                                                            |
+| Feature                      | Status                   | Nuget Package               |
+|------------------------------|--------------------------|-----------------------------|
+| SDK                          | First iteration complete | StarCitizenApi              |
+| File Local Caching           | First iteration complete | StarCitizenApi.FileSystem   |
+| Azure Blob Storage Caching   | First iteration complete | StarCitizenApi.WindowsAzure |
+| Discrepancies Detection Tool | First iteration complete |                             |
+| Wiki for getting started     | Pending                  |                             |
