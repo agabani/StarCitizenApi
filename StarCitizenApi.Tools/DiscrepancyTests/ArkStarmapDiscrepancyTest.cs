@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using StarCitizenApi.ArkStarmap;
 using StarCitizenApi.ArkStarmap.Internal;
+using StarCitizenApi.FileSystem.Cache;
 
 namespace StarCitizenApi.Tools.DiscrepancyTests
 {
@@ -11,8 +11,11 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
     [Explicit]
     public class ArkStarmapDiscrepancyTest
     {
-        private readonly ArkStarmapApiClient _arkStarmapApiClient = new ArkStarmapApiClient(ArkStarmapOptions.Default);
-        private readonly ArkStarmap.ArkStarmap _arkStarmap = new ArkStarmap.ArkStarmap();
+        private readonly ArkStarmapApiClient _arkStarmapApiClient =
+            new ArkStarmapApiClient(new FileCache(CacheOptions.Default));
+
+        private readonly ArkStarmap.ArkStarmap _arkStarmap =
+            new ArkStarmap.ArkStarmap(new FileCache(CacheOptions.Default));
 
         private static void Test(JToken jObject, object @object)
         {
@@ -38,15 +41,12 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         public async Task CelestialObjects()
         {
             foreach (var starSystem in (await _arkStarmap.BootUp()).Data.Systems.ResultSet)
+            foreach (var system in (await _arkStarmap.StarSystem(starSystem.Code)).Data.ResultSet)
+            foreach (var celestialObject in system.CelestialObjects)
             {
-                foreach (var system in (await _arkStarmap.StarSystem(starSystem.Code)).Data.ResultSet)
-                {
-                    foreach (var celestialObject in system.CelestialObjects)
-                    {
-                        Console.WriteLine(celestialObject.Code);
-                        Test(await _arkStarmapApiClient.CelestialObjects(celestialObject.Code), await _arkStarmap.CelestialObjects(celestialObject.Code));
-                    }
-                }
+                Console.WriteLine(celestialObject.Code);
+                Test(await _arkStarmapApiClient.CelestialObjects(celestialObject.Code),
+                    await _arkStarmap.CelestialObjects(celestialObject.Code));
             }
         }
 
@@ -61,9 +61,8 @@ namespace StarCitizenApi.Tools.DiscrepancyTests
         public async Task StarSystem()
         {
             foreach (var starSystem in (await _arkStarmap.BootUp()).Data.Systems.ResultSet)
-            {
-                Test(await _arkStarmapApiClient.StarSystem(starSystem.Code), await _arkStarmap.StarSystem(starSystem.Code));
-            }
+                Test(await _arkStarmapApiClient.StarSystem(starSystem.Code),
+                    await _arkStarmap.StarSystem(starSystem.Code));
         }
     }
 }

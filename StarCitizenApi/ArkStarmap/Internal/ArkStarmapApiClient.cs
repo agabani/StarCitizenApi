@@ -14,11 +14,11 @@ namespace StarCitizenApi.ArkStarmap.Internal
     public class ArkStarmapApiClient
     {
         private static readonly ApiClient Client = new ApiClient(new Uri("https://robertsspaceindustries.com"));
-        private readonly FileCache _fileCache;
+        private readonly ICache _cache;
 
-        public ArkStarmapApiClient(ArkStarmapOptions options)
+        public ArkStarmapApiClient(ICache cache)
         {
-            _fileCache = new FileCache(options.CacheLocation);
+            _cache = cache;
         }
 
         public Task<JObject> BootUp()
@@ -43,31 +43,28 @@ namespace StarCitizenApi.ArkStarmap.Internal
 
         public Task<JObject> FindRoute(string departure, string destination, string shipSize)
         {
-            return Post("/api/starmap/routes/find", new {Departure = departure, Destination = destination, Ship_Size = shipSize});
+            return Post("/api/starmap/routes/find",
+                new {Departure = departure, Destination = destination, Ship_Size = shipSize});
         }
 
         public async Task<JObject> Post(string endpoint, object body)
         {
             var json = ToJson(body);
 
-            var content = _fileCache.Get(endpoint, json);
+            var content = _cache.Get(endpoint, json);
 
             if (content != null)
-            {
                 return FromJson(content);
-            }
 
             using (var response = await Client.Send(NewPostRequest(endpoint, json)))
             {
                 if (response.StatusCode != HttpStatusCode.OK)
-                {
                     throw new Exception();
-                }
 
                 content = await response.Content.ReadAsStringAsync();
             }
 
-            _fileCache.Put(endpoint, json, content);
+            _cache.Put(endpoint, json, content);
 
             return FromJson(content);
         }
@@ -75,9 +72,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
         private static HttpRequestMessage NewPostRequest(string endpoint, string json)
         {
             if (json == null)
-            {
                 return new HttpRequestMessage(HttpMethod.Post, endpoint);
-            }
 
             return new HttpRequestMessage(HttpMethod.Post, endpoint)
             {
@@ -87,8 +82,10 @@ namespace StarCitizenApi.ArkStarmap.Internal
 
         private static string ToJson(object o)
         {
-            return o == null ? null
-                : JsonConvert.SerializeObject(o, new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
+            return o == null
+                ? null
+                : JsonConvert.SerializeObject(o,
+                    new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
         }
 
         private static JObject FromJson(string value)

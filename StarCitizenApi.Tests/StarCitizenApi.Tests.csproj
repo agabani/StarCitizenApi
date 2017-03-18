@@ -52,6 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StarCitizenApi.FileSystem\StarCitizenApi.FileSystem.csproj">
+      <Project>{D8B6C5C9-C828-42FE-AD78-EF1E771B809D}</Project>
+      <Name>StarCitizenApi.FileSystem</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StarCitizenApi\StarCitizenApi.csproj">
       <Project>{be9c2c47-9bd1-4763-861e-1403fd192708}</Project>
       <Name>StarCitizenApi</Name>

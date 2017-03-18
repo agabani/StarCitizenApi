@@ -48,11 +48,10 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArkStarmap\ArkStarmapOptions.cs" />
+    <Compile Include="ArkStarmap\Cache\ICache.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Identity.cs" />
     <Compile Include="Internal\ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
-    <Compile Include="ArkStarmap\Cache\FileCache.cs" />
     <Compile Include="ArkStarmap\Internal\ArkStarmapApiClient.cs" />
     <Compile Include="ArkStarmap\Model\BootUp\TunnelEntrance.cs" />
     <Compile Include="ArkStarmap\Model\CelestialObjects\CelestialObjects.cs" />

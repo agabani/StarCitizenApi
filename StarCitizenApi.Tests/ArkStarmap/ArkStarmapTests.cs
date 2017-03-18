@@ -1,17 +1,19 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using StarCitizenApi.FileSystem.Cache;
 
 namespace StarCitizenApi.Tests.ArkStarmap
 {
     [TestFixture]
     public class ArkStarmapTests
     {
+        private readonly StarCitizenApi.ArkStarmap.ArkStarmap arkStarmap =
+            new StarCitizenApi.ArkStarmap.ArkStarmap(new FileCache(CacheOptions.Default));
+
         [Test]
         public async Task BootUp()
         {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
-
             var result = await arkStarmap.BootUp();
 
             Assert.That(result.Success, Is.EqualTo(1));
@@ -31,9 +33,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
             // Systems
             Assert.That(result.Data.Systems.ResultSet.All(r => r.Id != null));
             foreach (var resultSet in result.Data.Systems.ResultSet)
-            {
                 Assert.That(resultSet.Affiliation.All(affiliation => affiliation.MembershipId != null));
-            }
 
             // Tunnels
             Assert.That(result.Data.Tunnels.ResultSet, Is.Not.Empty);
@@ -52,8 +52,6 @@ namespace StarCitizenApi.Tests.ArkStarmap
         [TestCase("STANTON.STATION.PORTOLISAR")]
         public async Task CelestialObjects(string code)
         {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
-
             var result = await arkStarmap.CelestialObjects(code);
 
             Assert.That(result.Data.ResultSet.All(r => r.Children.All(c => c.Id != null)));
@@ -63,9 +61,6 @@ namespace StarCitizenApi.Tests.ArkStarmap
         [TestCase("SOL")]
         public async Task Find(string query)
         {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
-
-
             var result = await arkStarmap.Find(query);
 
             Assert.That(result.Success, Is.EqualTo(1));
@@ -78,8 +73,6 @@ namespace StarCitizenApi.Tests.ArkStarmap
         [TestCase("SOL.PLANETS.EARTH", "STANTON.STATION.PORTOLISAR", "L")]
         public async Task FindRoute(string departure, string destination, string shipSize)
         {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
-
             var result = await arkStarmap.FindRoute(departure, destination, shipSize);
 
             Assert.That(result.Data.LeastJumps.Segments.All(s => s.Id != null));
@@ -91,8 +84,6 @@ namespace StarCitizenApi.Tests.ArkStarmap
         [TestCase("STANTON")]
         public async Task StarSystem(string code)
         {
-            var arkStarmap = new StarCitizenApi.ArkStarmap.ArkStarmap();
-
             var result = await arkStarmap.StarSystem(code);
 
             Assert.That(result.Data.ResultSet.All(r => r.CelestialObjects.All(c => c.Affiliation.All(a => a.Id != null))));

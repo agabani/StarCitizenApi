@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using StarCitizenApi.ArkStarmap.Cache;
 using StarCitizenApi.ArkStarmap.Internal;
 using StarCitizenApi.ArkStarmap.Model;
 using StarCitizenApi.ArkStarmap.Model.BootUp;
@@ -13,13 +14,9 @@ namespace StarCitizenApi.ArkStarmap
     {
         private readonly ArkStarmapApiClient _client;
 
-        public ArkStarmap() : this(ArkStarmapOptions.Default)
+        public ArkStarmap(ICache cache)
         {
-        }
-
-        public ArkStarmap(ArkStarmapOptions options)
-        {
-            _client = new ArkStarmapApiClient(options);
+            _client = new ArkStarmapApiClient(cache);
         }
 
         public async Task<Result<BootUp>> BootUp()
