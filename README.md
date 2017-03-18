@@ -1,5 +1,7 @@
 # Star Citizen API
 
+![Build status](https://ci.appveyor.com/api/projects/status/32pxjo4lkh5h3peq?svg=true)
+
 ## Development Principles
 
 1. User experience comes first.
