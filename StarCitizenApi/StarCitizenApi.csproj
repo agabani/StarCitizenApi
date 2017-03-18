@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArkStarmap\Cache\ICache.cs" />
+    <Compile Include="ArkStarmap\Cache\NullCache.cs" />
     <Compile Include="ArkStarmap\Model\Shared\Identity.cs" />
     <Compile Include="Internal\ApiClient.cs" />
     <Compile Include="ArkStarmap\ArkStarmap.cs" />
