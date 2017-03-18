@@ -12,14 +12,15 @@
 
 ## Modules
 
-| Module Name                               | Reference                                  | Status                        |
-|-------------------------------------------|--------------------------------------------|-------------------------------|
-| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://robertsspaceindustries.com/starmap | Refinement through demo usage |
+| Module Name                               | Nuget Package URL                                        | Status                        |
+|-------------------------------------------|----------------------------------------------------------|-------------------------------|
+| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://www.myget.org/feed/agabani/package/nuget/StarCitizenApi | Refinement through demo usage |
 
 ## ARK Starmap
 
 - **Description:** SDK for Star Citizen's ARK Starmap
 - **Motivation:** Intergration with Star Citizen business process systems
+- **Reference:** https://robertsspaceindustries.com/starmap
 
 ### Definition of Done
 
