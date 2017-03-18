@@ -48,16 +48,26 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArkStarmap\ArkStarmapTests.cs" />
+    <Compile Include="ArkStarmap\Blob\ArkStarmapTests.cs" />
+    <Compile Include="ArkStarmap\File\ArkStarmapTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StarCitizenApi.FileSystem\StarCitizenApi.FileSystem.csproj">
+      <Project>{D8B6C5C9-C828-42FE-AD78-EF1E771B809D}</Project>
+      <Name>StarCitizenApi.FileSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarCitizenApi.WindowsAzure\StarCitizenApi.WindowsAzure.csproj">
+      <Project>{0aee07b2-3ec9-4ecf-9ede-d19a3205cd4c}</Project>
+      <Name>StarCitizenApi.WindowsAzure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StarCitizenApi\StarCitizenApi.csproj">
       <Project>{be9c2c47-9bd1-4763-861e-1403fd192708}</Project>
       <Name>StarCitizenApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
