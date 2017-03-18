@@ -10,7 +10,7 @@ namespace StarCitizenApi.ArkStarmap.Cache
 
         internal FileCache(string workingDirectory)
         {
-            _cacheDirectory = $"Cache\\{workingDirectory}";
+            _cacheDirectory = $"{workingDirectory}\\Cache";
 
             if (!Directory.Exists(_cacheDirectory))
             {
