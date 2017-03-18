@@ -51,7 +51,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
         {
             var json = ToJson(body);
 
-            var content = _cache.Get(endpoint, json);
+            var content = await _cache.Get(endpoint, json);
 
             if (content != null)
                 return FromJson(content);
@@ -64,7 +64,7 @@ namespace StarCitizenApi.ArkStarmap.Internal
                 content = await response.Content.ReadAsStringAsync();
             }
 
-            _cache.Put(endpoint, json, content);
+            await _cache.Put(endpoint, json, content);
 
             return FromJson(content);
         }

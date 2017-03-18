@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using StarCitizenApi.ArkStarmap.Cache;
@@ -18,21 +19,21 @@ namespace StarCitizenApi.WindowsAzure.Cache
             _container.CreateIfNotExists();
         }
 
-        public string Get(string endpoint, string body)
+        public async Task<string> Get(string endpoint, string body)
         {
             var blockBlobReference = _container
                 .GetBlockBlobReference(FileName(endpoint, body));
 
             return blockBlobReference.Exists()
-                ? blockBlobReference.DownloadText(Encoding.UTF8)
+                ? await blockBlobReference.DownloadTextAsync(Encoding.UTF8, null, null, null)
                 : null;
         }
 
-        public void Put(string endpoint, string body, string content)
+        public async Task Put(string endpoint, string body, string content)
         {
-            _container
+            await _container
                 .GetBlockBlobReference(FileName(endpoint, body))
-                .UploadText(content, Encoding.UTF8);
+                .UploadTextAsync(content, Encoding.UTF8, null, null, null);
         }
 
         private static string FileName(string endpoint, string body = "")

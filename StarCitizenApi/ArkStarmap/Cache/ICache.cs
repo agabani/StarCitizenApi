@@ -1,8 +1,10 @@
-﻿namespace StarCitizenApi.ArkStarmap.Cache
+﻿using System.Threading.Tasks;
+
+namespace StarCitizenApi.ArkStarmap.Cache
 {
     public interface ICache
     {
-        string Get(string endpoint, string body);
-        void Put(string endpoint, string body, string content);
+        Task<string> Get(string endpoint, string body);
+        Task Put(string endpoint, string body, string content);
     }
 }

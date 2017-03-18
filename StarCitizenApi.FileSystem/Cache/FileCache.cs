@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using StarCitizenApi.ArkStarmap.Cache;
 
 namespace StarCitizenApi.FileSystem.Cache
@@ -17,16 +18,31 @@ namespace StarCitizenApi.FileSystem.Cache
                 Directory.CreateDirectory(_cacheDirectory);
         }
 
-        public string Get(string endpoint, string body)
+        public async Task<string> Get(string endpoint, string body)
         {
             var filePath = FilePath(endpoint, body);
 
-            return File.Exists(filePath) ? File.ReadAllText(filePath, Encoding.UTF8) : null;
+            if (!File.Exists(filePath))
+                return null;
+
+            using (var fileStream = File.Open(FilePath(endpoint, body), FileMode.Open))
+            {
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                {
+                    return await streamReader.ReadToEndAsync();
+                }
+            }
         }
 
-        public void Put(string endpoint, string body, string content)
+        public async Task Put(string endpoint, string body, string content)
         {
-            File.WriteAllText(FilePath(endpoint, body), content, Encoding.UTF8);
+            using (var fileStream = File.Open(FilePath(endpoint, body), FileMode.Create))
+            {
+                using (var streamWriter = new StreamWriter(fileStream, Encoding.UTF8))
+                {
+                    await streamWriter.WriteAsync(content);
+                }
+            }
         }
 
         private string FilePath(string endpoint, string body)
