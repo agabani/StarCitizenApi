@@ -54,13 +54,18 @@
     <Reference Include="System.Net.Http.WebRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiscrepancyTests\ArkStarmapDiscrepancyTest.cs" />
+    <Compile Include="DiscrepancyTests\Blob\ArkStarmapDiscrepancyTest.cs" />
+    <Compile Include="DiscrepancyTests\File\ArkStarmapDiscrepancyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarCitizenApi.FileSystem\StarCitizenApi.FileSystem.csproj">
       <Project>{d8b6c5c9-c828-42fe-ad78-ef1e771b809d}</Project>
       <Name>StarCitizenApi.FileSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarCitizenApi.WindowsAzure\StarCitizenApi.WindowsAzure.csproj">
+      <Project>{0AEE07B2-3EC9-4ECF-9EDE-D19A3205CD4C}</Project>
+      <Name>StarCitizenApi.WindowsAzure</Name>
     </ProjectReference>
     <ProjectReference Include="..\StarCitizenApi\StarCitizenApi.csproj">
       <Project>{be9c2c47-9bd1-4763-861e-1403fd192708}</Project>
@@ -70,6 +75,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

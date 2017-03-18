@@ -3,19 +3,27 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using StarCitizenApi.ArkStarmap.Internal;
-using StarCitizenApi.FileSystem.Cache;
+using StarCitizenApi.WindowsAzure.Cache;
 
-namespace StarCitizenApi.Tools.DiscrepancyTests
+namespace StarCitizenApi.Tools.DiscrepancyTests.Blob
 {
     [TestFixture]
     [Explicit]
     public class ArkStarmapDiscrepancyTest
     {
         private readonly ArkStarmapApiClient _arkStarmapApiClient =
-            new ArkStarmapApiClient(new FileCache(CacheOptions.Default));
+            new ArkStarmapApiClient(new BlobCache(new CacheOptions
+            {
+                ConnectionString = "UseDevelopmentStorage=true;",
+                Container = "starcitizenapicache"
+            }));
 
         private readonly ArkStarmap.ArkStarmap _arkStarmap =
-            new ArkStarmap.ArkStarmap(new FileCache(CacheOptions.Default));
+            new ArkStarmap.ArkStarmap(new BlobCache(new CacheOptions
+            {
+                ConnectionString = "UseDevelopmentStorage=true;",
+                Container = "starcitizenapicache"
+            }));
 
         private static void Test(JToken jObject, object @object)
         {
