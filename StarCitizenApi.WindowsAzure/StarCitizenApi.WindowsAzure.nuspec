@@ -4,19 +4,20 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>Star Citizen API File System</title>
+    <title>Star Citizen API Windows Azure</title>
     <authors>agabani</authors>
     <owners>agabani</owners>
     <licenseUrl>https://github.com/agabani/StarCitizenApi/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/agabani/StarCitizenApi</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Star Citizen API File System</description>
+    <description>Star Citizen API Windows Azure</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>Star Citizen API wrapper SDK file cache caching</tags>
+    <tags>Star Citizen API wrapper SDK Windows Azure cache caching</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="9.0.1" />
       <dependency id="Microsoft.Net.Http" version="2.2.29" />
+      <dependency id="WindowsAzure.Storage" version="8.1.1" />
     </dependencies>
   </metadata>
 </package>
