@@ -14,18 +14,18 @@
 
 | Module Name                               | Reference                                  | Status                        |
 |-------------------------------------------|--------------------------------------------|-------------------------------|
-| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://robertsspaceindustries.com/starmap | Discrepancy Tool Development  |
+| [StarCitizenApi.ArkStarmap](#ark-starmap) | https://robertsspaceindustries.com/starmap | Refinement through demo usage |
 
 ## ARK Starmap
 
-|                    |                                             |
-|--------------------|---------------------------------------------|
-| Description        | SDK for Star Citizen's ARK Starmap          |
-| Motivation         | Intergration with business processes system |
+- **Description:** SDK for Star Citizen's ARK Starmap
+- **Motivation:** Intergration with Star Citizen business process systems
 
 ### Definition of Done
 
-* SDK Complete.
-* Local Caching.
-* Tool for detecting discrepancies.
-* Wiki for getting started.
+| Feature                      | Status                                                             |
+|------------------------------|--------------------------------------------------------------------|
+| SDK                          | First iteration complete                                           |
+| Local Caching                | First iteration complete (mandatory non expiring local file cache) |
+| Discrepancies Detection Tool | First iteration complete                                           |
+| Wiki for getting started     | Pending                                                            |
