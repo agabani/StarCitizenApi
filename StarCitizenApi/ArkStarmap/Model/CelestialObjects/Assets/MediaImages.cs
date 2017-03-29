@@ -19,6 +19,9 @@ namespace StarCitizenApi.ArkStarmap.Model.CelestialObjects.Assets
         [JsonProperty("tavern_upload_square")]
         public string TavernUploadSquare { get; set; }
 
+        [JsonProperty("tavern_upload_mini")]
+        public string TavernUploadMini { get; set; }
+
         [JsonProperty("tavern_upload_small")]
         public string TavernUploadSmall { get; set; }
 
