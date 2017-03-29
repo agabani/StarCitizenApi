@@ -15,7 +15,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>Star Citizen API wrapper SDK file cache caching</tags>
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="Newtonsoft.Json" version="10.0.1" />
       <dependency id="Microsoft.Net.Http" version="2.2.29" />
     </dependencies>
   </metadata>
