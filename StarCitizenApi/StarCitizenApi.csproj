@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Version>1.0.0.0</Version>
+    <Authors>agabani</Authors>
+    <Company>agabani</Company>
+    <PackageLicenseUrl>https://github.com/agabani/StarCitizenApi/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/agabani/StarCitizenApi</PackageProjectUrl>
+    <PackageTags>Star Citizen API wrapper SDK</PackageTags>
+    <Copyright>Copyright 2017</Copyright>
+    <Description>Star Citizen API</Description>
   </PropertyGroup>
 
   <ItemGroup>

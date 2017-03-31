@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Version>1.0.0.0</Version>
+    <Authors>agabani</Authors>
+    <Company>agabani</Company>
+    <Description>Star Citizen API File System</Description>
+    <PackageLicenseUrl>https://github.com/agabani/StarCitizenApi/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/agabani/StarCitizenApi</PackageProjectUrl>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageTags>Star Citizen API wrapper SDK file cache caching</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

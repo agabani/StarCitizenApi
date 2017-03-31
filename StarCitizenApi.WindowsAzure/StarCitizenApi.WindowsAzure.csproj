@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Version>1.0.0.0</Version>
+    <Authors>agabani</Authors>
+    <Company>agabani</Company>
+    <Description>Star Citizen API Windows Azure</Description>
+    <PackageTags>Star Citizen API wrapper SDK Windows Azure cache caching</PackageTags>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/agabani/StarCitizenApi/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/agabani/StarCitizenApi</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
