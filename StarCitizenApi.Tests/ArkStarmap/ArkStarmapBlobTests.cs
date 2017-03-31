@@ -15,6 +15,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
                 }));
 
         [Theory]
+        [Trait("Category", "Integration.Azure")]
         [InlineData("SOL.STARS.SOL")]
         [InlineData("SOL.PLANETS.JUPITER")]
         [InlineData("SOL.JUMPPOINTS.DAVIEN")]
@@ -28,6 +29,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
         }
 
         [Theory]
+        [Trait("Category", "Integration.Azure")]
         [InlineData("SOL")]
         public async Task Find(string query)
         {
@@ -40,6 +42,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
         }
 
         [Theory]
+        [Trait("Category", "Integration.Azure")]
         [InlineData("SOL.PLANETS.EARTH", "STANTON.STATION.PORTOLISAR", "L")]
         public async Task FindRoute(string departure, string destination, string shipSize)
         {
@@ -50,6 +53,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
         }
 
         [Theory]
+        [Trait("Category", "Integration.Azure")]
         [InlineData("SOL")]
         [InlineData("STANTON")]
         public async Task StarSystem(string code)
@@ -61,6 +65,7 @@ namespace StarCitizenApi.Tests.ArkStarmap
         }
 
         [Fact]
+        [Trait("Category", "Integration.Azure")]
         public async Task BootUp()
         {
             var result = await _arkStarmap.BootUp();

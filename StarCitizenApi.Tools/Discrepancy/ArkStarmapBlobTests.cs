@@ -38,6 +38,7 @@ namespace StarCitizenApi.Tools.Discrepancy
         }
 
         [Theory]
+        [Trait("Category", "Discrepancy.Azure")]
         [InlineData("SOL")]
         public async Task Find(string query)
         {
@@ -45,12 +46,14 @@ namespace StarCitizenApi.Tools.Discrepancy
         }
 
         [Fact]
+        [Trait("Category", "Discrepancy.Azure")]
         public async Task BootUp()
         {
             Test(await _arkStarmapApiClient.BootUp(), await _arkStarmap.BootUp());
         }
 
         [Fact]
+        [Trait("Category", "Discrepancy.Azure")]
         public async Task CelestialObjects()
         {
             foreach (var starSystem in (await _arkStarmap.BootUp()).Data.Systems.ResultSet)
@@ -64,6 +67,7 @@ namespace StarCitizenApi.Tools.Discrepancy
         }
 
         [Fact]
+        [Trait("Category", "Discrepancy.Azure")]
         public async Task StarSystem()
         {
             foreach (var starSystem in (await _arkStarmap.BootUp()).Data.Systems.ResultSet)
