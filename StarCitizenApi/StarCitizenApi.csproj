@@ -10,6 +10,7 @@
     <PackageTags>Star Citizen API wrapper SDK</PackageTags>
     <Copyright>Copyright 2017</Copyright>
     <Description>Star Citizen API</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://github.com/agabani/StarCitizenApi</PackageProjectUrl>
     <Copyright>Copyright 2017</Copyright>
     <PackageTags>Star Citizen API wrapper SDK file cache caching</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

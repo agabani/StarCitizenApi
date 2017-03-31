@@ -10,6 +10,7 @@
     <Copyright>Copyright 2017</Copyright>
     <PackageLicenseUrl>https://github.com/agabani/StarCitizenApi/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/agabani/StarCitizenApi</PackageProjectUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
