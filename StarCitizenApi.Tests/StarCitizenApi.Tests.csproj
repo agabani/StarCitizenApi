@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StarCitizenApi.FileSystem\StarCitizenApi.FileSystem.csproj" />
+    <ProjectReference Include="..\StarCitizenApi.WindowsAzure\StarCitizenApi.WindowsAzure.csproj" />
     <ProjectReference Include="..\StarCitizenApi\StarCitizenApi.csproj" />
   </ItemGroup>
 
