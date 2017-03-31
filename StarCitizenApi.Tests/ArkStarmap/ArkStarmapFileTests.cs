@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
-using StarCitizenApi.ArkStarmap.Cache;
+using StarCitizenApi.FileSystem.Cache;
 using Xunit;
 
 namespace StarCitizenApi.Tests.ArkStarmap
 {
-    public class ArkStarmapNullTests
+    public class ArkStarmapFileTests
     {
         private readonly StarCitizenApi.ArkStarmap.ArkStarmap _arkStarmap =
-            new StarCitizenApi.ArkStarmap.ArkStarmap(new NullCache());
+            new StarCitizenApi.ArkStarmap.ArkStarmap(new FileCache(CacheOptions.Default));
 
         [Theory]
         [InlineData("SOL.STARS.SOL")]

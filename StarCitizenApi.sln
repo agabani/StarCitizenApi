@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizenApi", "StarCitiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizenApi.Tests", "StarCitizenApi.Tests\StarCitizenApi.Tests.csproj", "{ED5A15F3-215F-4113-A757-E294D940626F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarCitizenApi.FileSystem", "StarCitizenApi.FileSystem\StarCitizenApi.FileSystem.csproj", "{D37C3962-1B66-4BEE-9D0A-CD91505BF789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ED5A15F3-215F-4113-A757-E294D940626F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED5A15F3-215F-4113-A757-E294D940626F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED5A15F3-215F-4113-A757-E294D940626F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D37C3962-1B66-4BEE-9D0A-CD91505BF789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D37C3962-1B66-4BEE-9D0A-CD91505BF789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D37C3962-1B66-4BEE-9D0A-CD91505BF789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D37C3962-1B66-4BEE-9D0A-CD91505BF789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
