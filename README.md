@@ -10,12 +10,6 @@
 4. Make no assumptions on behalf of the user.
 5. Do not trouble the Star Citizen developers.
 
-## Modules
-
-| Module Name               | Status                     |
-|---------------------------|----------------------------|
-| StarCitizenApi.ArkStarmap | Migrating to .net standard |
-
 ## Nuget Packages
 
 | Nuget Package Name          | Nuget Package URL                                                            |
